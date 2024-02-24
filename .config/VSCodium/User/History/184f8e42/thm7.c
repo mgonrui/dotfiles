@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+char *ft_strstr(char *str, char *to_find)
+{
+    int i = 0;
+    while (str[i] != '\0')
+    {
+        if (str[i] == to_find[0])
+        {
+            int j = 0;
+            while (to_find[j] != '\0')
+            {
+                if (to_find[j] == str[i])
+                {
+                    i++;
+                    j++;
+                }
+                else
+                {
+                    i -= j;
+                    break;
+                }
+                char* p_found_str = &str[i - j];
+                return (p_found_str);
+            }
+            
+        }
+        i++;
+    }
+    return NULL;
+}
+
+int main(void)
+{
+    char str[] = "hello world!";
+    char to_find[] = "o";
+    // char *found = strstr(str, to_find);
+    char *found = ft_strstr(str, to_find);
+    printf("%p\n", found);
+    return 0;
+}

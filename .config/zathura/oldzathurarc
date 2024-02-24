@@ -1,0 +1,66 @@
+set selection-clipboard clipboard
+set statusbar-h-padding 10
+set statusbar-v-padding 5 
+set page-padding 1 
+set scroll-step 100 
+map i recolor
+map <C-l> feedkeys ":blist <Tab>"
+map <C-;> feedkeys ":blist . <Return>"
+map <C-m> feedkeys ":bmark "
+map <C-.> feedkeys ":bmark . <Return>"
+map <C-d> feedkeys ":bdelete "
+
+set font "Sarasa Mono K 13"
+
+set notification-error-bg       "#2e2c2b" # bg
+set notification-error-fg       "#d4be98" # bright:red
+set notification-warning-bg     "#2e2c2b" # bg
+set notification-warning-fg     "#d4be98" # bright:yellow
+set notification-bg             "#2e2c2b" # bg
+set notification-fg             "#d4be98" # bright:green
+set completion-bg               "#31363b" # bg2
+set completion-fg               "#d4be98" # fg
+set completion-group-bg         "#3c3836" # bg1
+set completion-group-fg         "#88909f" # gray
+set completion-highlight-bg     "#6cb6eb" # bright:blue
+set completion-highlight-fg     "#31363b" # bg2
+
+# Define the color in index mode
+set index-bg                    "#2e2c2b" # bg2
+set index-fg                    "#d4be98" # fg
+# set index-active-bg             "#" # bright:blue
+# set index-active-bg             "#504945" # bright:blue
+set index-active-bg             "#3c3836" # bright:blue
+# set index-active-bg             "#d4be98" # bright:blue
+#
+set index-active-fg             "#d4be98" # bg2
+
+set inputbar-bg                 "#2e2c2b" # bg
+set inputbar-fg                 "#d4be98" # fg
+
+set statusbar-bg                "#4f4743" # bg2
+set statusbar-fg                "#d4be98" # fg
+
+set highlight-color             "#98971a" # bright:yellow
+#set highlight-color             "#d4be98" # bright:yellow
+set highlight-active-color      "#fe8019" # bright:orange
+# set highlight-active-color      "#fe8019" # bright:orange
+
+set default-fg                  "#2e2c2b" # bg
+set default-bg                 "#d4be98" # fg
+set render-loading              true
+set render-loading-bg           "#2e2c2b" # bg
+set render-loading-fg           "#d4be98" # fg
+
+# Recolor book content's color
+set recolor-lightcolor          "#2e2c2b" # bg
+set recolor-darkcolor           "#d4be98" # fg
+
+set recolor                     "true"
+# set recolor-keephue             true      # keep original color
+
+# Startup options
+#
+#
+set adjust-open width
+set recolor true

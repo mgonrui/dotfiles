@@ -1,0 +1,26 @@
+2024-02-24 23:00:27.872 [info] Extension host with pid 549066 started
+2024-02-24 23:00:27.872 [info] Skipping acquiring lock for /home/mgr/.config/VSCodium/User/workspaceStorage/eb30aa468ddc488ae8d124605fd84f7a.
+2024-02-24 23:00:28.374 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-02-24 23:00:28.402 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: 'onLanguage'
+2024-02-24 23:00:28.481 [info] ExtensionService#_doActivateExtension mkhl.direnv, startup: false, activationEvent: 'onLanguage'
+2024-02-24 23:00:28.594 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-02-24 23:00:28.599 [info] ExtensionService#_doActivateExtension artlaman.chalice-icon-theme, startup: true, activationEvent: '*'
+2024-02-24 23:00:28.603 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2024-02-24 23:00:28.645 [info] ExtensionService#_doActivateExtension KnisterPeter.vscode-github, startup: true, activationEvent: '*'
+2024-02-24 23:00:28.817 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2024-02-24 23:00:28.918 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-02-24 23:00:28.967 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-02-24 23:00:29.076 [info] Eager extensions activated
+2024-02-24 23:00:29.137 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.140 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.148 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.156 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.231 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.256 [info] ExtensionService#_doActivateExtension maziac.asm-code-lens, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.268 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.281 [info] ExtensionService#_doActivateExtension sainnhe.gruvbox-material, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.301 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:29.321 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2024-02-24 23:00:31.133 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-24 23:00:31.173 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-02-24 23:05:50.590 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'

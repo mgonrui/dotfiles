@@ -1,0 +1,6 @@
+#!/bin/sh
+# use it together with fuzzy_win like this: fuzzy_win fuzzy_cmd
+selected="$(compgen -c | fzf -e -i -m --reverse --delimiter / --with-nth -3,-2,-1 )";
+[ -z "$selected" ] && exit;
+source ~/.config/zsh/aliases.sh;
+$selected

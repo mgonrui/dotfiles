@@ -1,0 +1,12 @@
+# Set the minimum required CMake version
+cmake_minimum_required(VERSION 3.0)
+
+# Define your project and specify its name
+project(myProject)
+
+# Add your source files
+#add_executable(your_executable_name main.cpp other_source.cpp)
+
+# You can set additional build options here if needed
+# For example, setting C++ standard to C++11
+#target_compile_features(your_executable_name PRIVATE cxx_std_11)

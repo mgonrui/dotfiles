@@ -1,0 +1,2 @@
+use nix shell.nix
+DIRENV_WARN_TIMEOUT=0

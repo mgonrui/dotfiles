@@ -1,0 +1,5 @@
+file:///home/mgr/.scripts/menu/killterm.sh {"mtime":1695761169038,"ctime":1695218420833,"size":37,"etag":"3b8p2kre816","orphaned":false,"typeId":""}
+#!/bin/sh
+
+sleep 0.01
+pkill alacritty

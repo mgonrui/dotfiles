@@ -1,0 +1,124 @@
+watching: /home/mgr/42programs/.envrc
+watching: /home/mgr/.local/share/direnv/allow/d76f7c9594b41654968c0e3f538b223780d887a1102e6eacd707172d2553f60a
+added: AR
+now: ar
+added: AS
+now: as
+added: CC
+now: gcc
+added: CONFIG_SHELL
+now: /nix/store/6payx2da66dbjl6vg15csxfb5hpf3df4-bash-5.2-p15/bin/bash
+added: CXX
+now: g++
+added: GIT_EDITOR
+now: /nix/store/0aqw895sas8sr7zl8n9508ym0cf4fdwq-vim-9.0.2116/bin/vim
+added: HOST_PATH
+now: /nix/store/w30b002vrhdwqsg4gnbycycn930s9m7b-compiler-rt-libc-17.0.6/bin:/nix/store/kjpanj8sfda335sca7rswrywnma1m40c-coreutils-9.3/bin:/nix/store/kkdpismvz265v32f1sh2pj389ccz063k-findutils-4.9.0/bin:/nix/store/c3xnax3m2v7n3pzy8n7j5pqi1y71r2p1-diffutils-3.10/bin:/nix/store/64xp5lnlqjhd0cw31357fnj3nwk0d1hf-gnused-4.9/bin:/nix/store/drydal0vdqbz7zlzqdcg1plkcij28889-gnugrep-3.11/bin:/nix/store/9hi7ma4l3zhzc9v5ycadiqp7s4bppnyz-gawk-5.2.2/bin:/nix/store/b31fhg820qmhqp91avgkpk82yjbcr19b-gnutar-1.35/bin:/nix/store/w3a1qnnzmqnjs3x7kvc8ard2yczzayjb-gzip-1.13/bin:/nix/store/llb4aadl530d9z6bckpsl4rbx2bq1471-bzip2-1.0.8-bin/bin:/nix/store/rkv8vjbydj8sfd31plfdkfqy5g134glv-gnumake-4.4.1/bin:/nix/store/6payx2da66dbjl6vg15csxfb5hpf3df4-bash-5.2-p15/bin:/nix/store/27lfx9iss3vsicffsb5s8xa90n7xy64r-patch-2.7.6/bin:/nix/store/vpz0cqp5skm99g3rwzzrnsqfnz7s15yz-xz-5.4.4-bin/bin:/nix/store/vaxfvjxn5cydk56222dnzi9ka192g9js-file-5.45/bin
+added: IN_NIX_SHELL
+now: impure
+added: LD
+now: ld
+added: NIX_BINTOOLS
+now: /nix/store/44dkqk3h8xp81ff6wr11f37kgvwzw1gh-binutils-wrapper-2.40
+added: NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
+now: 1
+added: NIX_BUILD_CORES
+now: 4
+added: NIX_BUILD_TOP
+now: /run/user/1000
+added: NIX_CC
+now: /nix/store/i6zjqpawh725z1lyg3alglzlabnzbjx7-gcc-wrapper-12.3.0
+added: NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
+now: 1
+added: NIX_CFLAGS_COMPILE
+now:  -frandom-seed=3z180m8qn8 -isystem /nix/store/1pwmr136q3s082mq6cvh7rn1hykab51q-compiler-rt-libc-17.0.6-dev/include -isystem /nix/store/1pwmr136q3s082mq6cvh7rn1hykab51q-compiler-rt-libc-17.0.6-dev/include -isystem /nix/store/1pwmr136q3s082mq6cvh7rn1hykab51q-compiler-rt-libc-17.0.6-dev/include -isystem /nix/store/1pwmr136q3s082mq6cvh7rn1hykab51q-compiler-rt-libc-17.0.6-dev/include
+added: NIX_ENFORCE_NO_NATIVE
+now: 1
+added: NIX_HARDENING_ENABLE
+now: fortify fortify3 stackprotector pic strictoverflow format relro bindnow
+added: NIX_LDFLAGS
+now: -rpath /nix/store/3z180m8qn8xikqy6wx3pwil6rqyg0qzy-nix-shell/lib 
+added: NIX_STORE
+now: /nix/store
+added: NM
+now: nm
+added: OBJCOPY
+now: objcopy
+added: OBJDUMP
+now: objdump
+changed: PATH
+was: /nix/store/0wbr0qzd3pnhxjvnkc5ls6078b2dgdhk-glib-2.78.3-bin/bin:/nix/store/62z5ksczg9aq1rg3k5mdmkxak1jmvibj-kitty-0.31.0/bin:/nix/store/rgxf807vi1pg35ibd0vmbfhkvj5wlx2c-imagemagick-7.1.1-25/bin:/nix/store/h217373mhksh7an4pkb8lvji8rz9gs3p-ncurses-6.4-dev/bin:/nix/store/p1zbyfrpj3hq50mxh5hmxl3kqpa2b1am-python3-3.11.6/bin:/nix/store/842aw9p8r28dgglg6qywfjxr3z5lfba6-python3.11-qtile-0.23.0/bin:/nix/store/b4pny5mmzzhr4grfn3mzvai6bwl0n0cr-cairo-1.18.0-dev/bin:/nix/store/2sg9ljmjcxpa12xw5081nsgvrg3cpgfl-freetype-2.13.2-dev/bin:/nix/store/q5cv7r1sh3s4niyq7vm6h1j74394naxs-bzip2-1.0.8-bin/bin:/nix/store/l80m62vim0z6g2h6s72zhvlalmr2xki8-brotli-1.1.0/bin:/nix/store/212p3xm056zwv41ji1y8cc4yfd4k25ql-libpng-apng-1.6.40-dev/bin:/nix/store/sq4hrqvwvkyxav3lwrinb33b0yrpw2n0-fontconfig-2.14.2-bin/bin:/nix/store/zc4nvfva5z2dskfvi2159bi80aw1769y-glib-2.78.3-dev/bin:/nix/store/k18y3f2xnzw0jzqwrhz8s3xwkk8w1p0i-gettext-0.21.1/bin:/nix/store/v0z3lnlbkmbjw79z93yih5kqd1vkqzms-wireless-tools-30.pre9/bin:/nix/store/ziwxv703qnvvlji4pqaprgymb7b548mf-python3.11-pywayland-0.4.17/bin:/run/wrappers/bin:/home/mgr/.nix-profile/bin:/home/mgr/.local/state/nix/profile/bin:/home/mgr/.local/state/nix/profile/bin:/etc/profiles/per-user/mgr/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin
+now: /nix/store/f2ibj8np6dyddf3kq68dkcvwfr6bmi9n-bash-interactive-5.2-p15/bin:/nix/store/rjna6v0kv6l8bifbn0xqm8jp76fw7gap-clang-wrapper-17.0.6/bin:/nix/store/cfjcrspiz9jpinczgjvsi0lylw0lhamj-clang-17.0.6/bin:/nix/store/cmd0vclz7xk5v3yw9bn1f0bi394z5win-glibc-2.38-44-bin/bin:/nix/store/kjpanj8sfda335sca7rswrywnma1m40c-coreutils-9.3/bin:/nix/store/505l13qqnpp0rvrja5s7rgwz5nzir579-binutils-wrapper-2.40/bin:/nix/store/avplrzzrpvsyxqs8xnhj2zc8g8r9vdli-binutils-2.40/bin:/nix/store/i6zjqpawh725z1lyg3alglzlabnzbjx7-gcc-wrapper-12.3.0/bin:/nix/store/0hw113w33pgmpvbi1r4yywl0f81vffl7-gcc-12.3.0/bin:/nix/store/44dkqk3h8xp81ff6wr11f37kgvwzw1gh-binutils-wrapper-2.40/bin:/nix/store/2cwm5mjdq4p3agjqm8k0641xi9s2rxv3-patchelf-0.15.0/bin:/nix/store/w30b002vrhdwqsg4gnbycycn930s9m7b-compiler-rt-libc-17.0.6/bin:/nix/store/kjpanj8sfda335sca7rswrywnma1m40c-coreutils-9.3/bin:/nix/store/kkdpismvz265v32f1sh2pj389ccz063k-findutils-4.9.0/bin:/nix/store/c3xnax3m2v7n3pzy8n7j5pqi1y71r2p1-diffutils-3.10/bin:/nix/store/64xp5lnlqjhd0cw31357fnj3nwk0d1hf-gnused-4.9/bin:/nix/store/drydal0vdqbz7zlzqdcg1plkcij28889-gnugrep-3.11/bin:/nix/store/9hi7ma4l3zhzc9v5ycadiqp7s4bppnyz-gawk-5.2.2/bin:/nix/store/b31fhg820qmhqp91avgkpk82yjbcr19b-gnutar-1.35/bin:/nix/store/w3a1qnnzmqnjs3x7kvc8ard2yczzayjb-gzip-1.13/bin:/nix/store/llb4aadl530d9z6bckpsl4rbx2bq1471-bzip2-1.0.8-bin/bin:/nix/store/rkv8vjbydj8sfd31plfdkfqy5g134glv-gnumake-4.4.1/bin:/nix/store/6payx2da66dbjl6vg15csxfb5hpf3df4-bash-5.2-p15/bin:/nix/store/27lfx9iss3vsicffsb5s8xa90n7xy64r-patch-2.7.6/bin:/nix/store/vpz0cqp5skm99g3rwzzrnsqfnz7s15yz-xz-5.4.4-bin/bin:/nix/store/vaxfvjxn5cydk56222dnzi9ka192g9js-file-5.45/bin:/nix/store/0wbr0qzd3pnhxjvnkc5ls6078b2dgdhk-glib-2.78.3-bin/bin:/nix/store/62z5ksczg9aq1rg3k5mdmkxak1jmvibj-kitty-0.31.0/bin:/nix/store/rgxf807vi1pg35ibd0vmbfhkvj5wlx2c-imagemagick-7.1.1-25/bin:/nix/store/h217373mhksh7an4pkb8lvji8rz9gs3p-ncurses-6.4-dev/bin:/nix/store/p1zbyfrpj3hq50mxh5hmxl3kqpa2b1am-python3-3.11.6/bin:/nix/store/842aw9p8r28dgglg6qywfjxr3z5lfba6-python3.11-qtile-0.23.0/bin:/nix/store/b4pny5mmzzhr4grfn3mzvai6bwl0n0cr-cairo-1.18.0-dev/bin:/nix/store/2sg9ljmjcxpa12xw5081nsgvrg3cpgfl-freetype-2.13.2-dev/bin:/nix/store/q5cv7r1sh3s4niyq7vm6h1j74394naxs-bzip2-1.0.8-bin/bin:/nix/store/l80m62vim0z6g2h6s72zhvlalmr2xki8-brotli-1.1.0/bin:/nix/store/212p3xm056zwv41ji1y8cc4yfd4k25ql-libpng-apng-1.6.40-dev/bin:/nix/store/sq4hrqvwvkyxav3lwrinb33b0yrpw2n0-fontconfig-2.14.2-bin/bin:/nix/store/zc4nvfva5z2dskfvi2159bi80aw1769y-glib-2.78.3-dev/bin:/nix/store/k18y3f2xnzw0jzqwrhz8s3xwkk8w1p0i-gettext-0.21.1/bin:/nix/store/v0z3lnlbkmbjw79z93yih5kqd1vkqzms-wireless-tools-30.pre9/bin:/nix/store/ziwxv703qnvvlji4pqaprgymb7b548mf-python3.11-pywayland-0.4.17/bin:/run/wrappers/bin:/home/mgr/.nix-profile/bin:/home/mgr/.local/state/nix/profile/bin:/home/mgr/.local/state/nix/profile/bin:/etc/profiles/per-user/mgr/bin:/nix/var/nix/profiles/default/bin:/run/current-system/sw/bin
+added: RANLIB
+now: ranlib
+added: READELF
+now: readelf
+added: SIZE
+now: size
+added: SOURCE_DATE_EPOCH
+now: 315532800
+added: STRINGS
+now: strings
+added: STRIP
+now: strip
+added: TEMP
+now: /run/user/1000
+added: TEMPDIR
+now: /run/user/1000
+added: TMP
+now: /run/user/1000
+added: TMPDIR
+now: /run/user/1000
+changed: XDG_DATA_DIRS
+was: /nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/share:/nix/store/zkhb73cnjyvgwkc3lsmc1s9b5ca5z8pi-gsettings-desktop-schemas-45.0/share/gsettings-schemas/gsettings-desktop-schemas-45.0:/nix/store/v8pynsbzsqixczqs2rx7b0vk7z2nafb5-gtk+3-3.24.38/share/gsettings-schemas/gtk+3-3.24.38:/nix/store/6akh02c8h29jp6yqynz8hiidf1pw2fn5-desktops/share:/home/mgr/.nix-profile/share:/home/mgr/.local/state/nix/profile/share:/home/mgr/.local/state/nix/profile/share:/etc/profiles/per-user/mgr/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
+now: /nix/store/2cwm5mjdq4p3agjqm8k0641xi9s2rxv3-patchelf-0.15.0/share:/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/share:/nix/store/zkhb73cnjyvgwkc3lsmc1s9b5ca5z8pi-gsettings-desktop-schemas-45.0/share/gsettings-schemas/gsettings-desktop-schemas-45.0:/nix/store/v8pynsbzsqixczqs2rx7b0vk7z2nafb5-gtk+3-3.24.38/share/gsettings-schemas/gtk+3-3.24.38:/nix/store/6akh02c8h29jp6yqynz8hiidf1pw2fn5-desktops/share:/home/mgr/.nix-profile/share:/home/mgr/.local/state/nix/profile/share:/home/mgr/.local/state/nix/profile/share:/etc/profiles/per-user/mgr/share:/nix/var/nix/profiles/default/share:/run/current-system/sw/share
+added: __structuredAttrs
+added: buildInputs
+added: buildPhase
+now: { echo "------------------------------------------------------------";
+  echo " WARNING: the existence of this path is not guaranteed.";
+  echo " It is an internal implementation detail for pkgs.mkShell.";
+  echo "------------------------------------------------------------";
+  echo;
+  # Record all build inputs as runtime dependencies
+  export;
+} >> "$out"
+
+added: builder
+now: /nix/store/6payx2da66dbjl6vg15csxfb5hpf3df4-bash-5.2-p15/bin/bash
+added: cmakeFlags
+added: configureFlags
+added: depsBuildBuild
+added: depsBuildBuildPropagated
+added: depsBuildTarget
+added: depsBuildTargetPropagated
+added: depsHostHost
+added: depsHostHostPropagated
+added: depsTargetTarget
+added: depsTargetTargetPropagated
+added: doCheck
+added: doInstallCheck
+added: mesonFlags
+added: name
+now: nix-shell
+added: nativeBuildInputs
+now: /nix/store/rjna6v0kv6l8bifbn0xqm8jp76fw7gap-clang-wrapper-17.0.6 /nix/store/i6zjqpawh725z1lyg3alglzlabnzbjx7-gcc-wrapper-12.3.0
+added: out
+now: /nix/store/3z180m8qn8xikqy6wx3pwil6rqyg0qzy-nix-shell
+added: outputs
+now: out
+added: patches
+added: phases
+now: buildPhase
+added: preferLocalBuild
+now: 1
+added: propagatedBuildInputs
+added: propagatedNativeBuildInputs
+added: shell
+now: /nix/store/6payx2da66dbjl6vg15csxfb5hpf3df4-bash-5.2-p15/bin/bash
+added: shellHook
+added: stdenv
+now: /nix/store/0fpawyv7ya4h142g3pd59i2xhl763rs9-stdenv-linux
+added: strictDeps
+added: system
+now: x86_64-linux

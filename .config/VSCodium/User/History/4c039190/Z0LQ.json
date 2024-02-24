@@ -1,0 +1,4 @@
+{
+    "C_Cpp.default.compilerPath": "/nix/store/vbh4481bzdv7pnqq8m3d0jwz27c0qx0x-clang-wrapper-16.0.6/bin/clang",
+    "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix"
+}

@@ -1,0 +1,41 @@
+alias ls="ls --color"
+alias rs="sudo nixos-rebuild switch"
+alias confnix="sudo nvim /etc/nixos/configuration.nix"
+alias rnet="sudo systemctl restart NetworkManager"
+alias confqtile="nvim ~/.config/qtile/config.py"
+alias paco=/home/mgr/francinette/tester.sh
+alias spotify="spotify & easyeffects &"
+alias spotifywm="spotify & easyeffects &"
+alias pdf="sh ~/.scripts/pdfopen.sh"
+alias exe="sh ~/.scripts/execscript.sh"
+# alias spotifywm="easyeffects & xdotool search --onlyvisible --classname --sync Easyeffects windowminimize & spotify &"
+# alias spotify="easyeffects & xdotool search --onlyvisible --classname --sync Easyeffects windowminimize & spotify &"
+
+# change config path for programs that cant really change it
+alias firefox="env HOME=/home/mgr/.config firefox"
+alias librewolf="env HOME=/home/mgr/.config librewolf"
+alias thunderbird="env HOME=/home/mgr/.config thunderbird"
+alias zotero="env HOME=/home/mgr/.config zotero"
+alias codium="distrobox enter arch -- codium --reuse-window"
+alias vs="distrobox enter arch -- codium --reuse-window"
+alias arduino="env HOME=/home/mgr/.config arduino"
+alias logseq="env HOME=/home/mgr/.config logseq"
+alias ghidra="env HOME=/home/mgr/.config ghidra"
+
+
+
+alias ls="ls --color"
+alias rs="sudo nixos-rebuild switch"
+alias confnix="sudo nvim /etc/nixos/configuration.nix"
+alias rnet="sudo systemctl restart NetworkManager"
+alias confqtile="nvim ~/.config/qtile/config.py"
+alias paco=/home/mgr/francinette/tester.sh
+alias spotify="spotify & easyeffects &"
+alias spotifywm="spotify & easyeffects &"
+alias pdf="sh ~/.scripts/pdfopen.sh"
+alias exe="sh ~/.scripts/execscript.sh"
+# alias spotifywm="easyeffects & xdotool search --onlyvisible --classname --sync Easyeffects windowminimize & spotify &"
+# alias spotify="easyeffects & xdotool search --onlyvisible --classname --sync Easyeffects windowminimize & spotify &"
+
+# change config path for programs that cant really change it
+alias Firefox="env HOME=/home/mgr/.config firefox"

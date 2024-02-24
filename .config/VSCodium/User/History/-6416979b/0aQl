@@ -1,0 +1,15 @@
+#!/bin/sh
+shopt -s expand_aliases
+
+# use it together with fuzzy_win like this: fuzzy_win fuzzy_cmd
+# selected="$(compgen -c | fzf  -e -i -m --reverse --border --margin 20%)" # --delimiter / --with-nth -3,-2,-1)"
+selected="$(compgen -c | xprompt -c -i -s -G C -g 400x50+500+0)" 
+source ~/.config/zsh/aliases.sh
+[ -z "$selected" ] && exit
+if [ "$selected" == "firefox" ]; then
+	firefox >/dev/null 2>&1 &
+else
+	"$selected" >/dev/null 2>&1 &
+fi
+
+#kitty bash -c "fzf $* < /proc/$$/fd/0 > /proc/$$/fd/1"

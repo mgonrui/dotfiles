@@ -1,0 +1,2 @@
+use nix shell.nix
+export DIRENV_WARN_TIMEOUT="10m"

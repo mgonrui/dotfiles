@@ -1,0 +1,6 @@
+2024-02-24 19:54:12.972 [info] /home/mgr/.config/VSCodium/User/settings.json closed
+2024-02-24 19:54:13.075 [info] /home/mgr/.config/VSCodium/User/settings.json closed
+2024-02-24 19:54:14.675 [info] Executing :wq
+2024-02-24 19:54:14.717 [info] /home/mgr/.config/zsh/.zshrc closed
+2024-02-24 19:54:14.717 [warning] getLineLength() called with out-of-bounds line 8
+2024-02-24 19:54:14.718 [warning] getLineLength() called with out-of-bounds line 8
