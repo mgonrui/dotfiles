@@ -1,0 +1,37 @@
+2024-03-14 09:52:13.356 [info] Extension host with pid 3069 started
+2024-03-14 09:52:13.558 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-03-14 09:52:13.572 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: 'onLanguage'
+2024-03-14 09:52:13.645 [info] ExtensionService#_doActivateExtension mkhl.direnv, startup: false, activationEvent: 'onLanguage'
+2024-03-14 09:52:13.742 [error] Activating extension arrterian.nix-env-selector failed due to an error:
+2024-03-14 09:52:13.742 [error] TypeError: The "path" argument must be of type string or an instance of Buffer or URL. Received null
+	at Object.readdir (node:fs:1418:10)
+	at t.readdir (node:electron/js2c/asar_bundle:2:10072)
+	at ext.actions.get_nix_files (/home/mgr/.vscode-oss/extensions/arrterian.nix-env-selector-1.0.11-universal/dist/main.js:2631:358)
+	at activate (/home/mgr/.vscode-oss/extensions/arrterian.nix-env-selector-1.0.11-universal/dist/main.js:2650:268)
+	at z._callActivateOptional (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:136:16939)
+	at z._callActivate (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:136:16613)
+	at /nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:136:14454
+	at async w._activate (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:7861)
+	at async w._waitForDepsThenActivate (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:7803)
+	at async w._initialize (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:124:7167)
+2024-03-14 09:52:13.805 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-03-14 09:52:13.810 [info] ExtensionService#_doActivateExtension artlaman.chalice-icon-theme, startup: true, activationEvent: '*'
+2024-03-14 09:52:13.819 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2024-03-14 09:52:13.910 [info] ExtensionService#_doActivateExtension KnisterPeter.vscode-github, startup: true, activationEvent: '*'
+2024-03-14 09:52:14.189 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2024-03-14 09:52:14.245 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-03-14 09:52:14.285 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-03-14 09:52:14.407 [info] Eager extensions activated
+2024-03-14 09:52:14.442 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.447 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.458 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.467 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.537 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.607 [info] ExtensionService#_doActivateExtension maziac.asm-code-lens, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.615 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.640 [info] ExtensionService#_doActivateExtension sainnhe.gruvbox-material, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.671 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:14.683 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2024-03-14 09:52:15.276 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-03-14 09:52:15.319 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-03-14 09:52:15.435 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'

@@ -1,0 +1,16 @@
+2024-03-07 09:22:46.331 [info] Deleted uninstalled extension from disk catppuccin.catppuccin-vsc /home/mgr/.vscode-oss/extensions/catppuccin.catppuccin-vsc-3.11.1-universal
+2024-03-07 09:22:46.755 [info] Getting Manifest... eamodio.gitlens
+2024-03-07 09:22:47.782 [info] Installing extension: eamodio.gitlens
+2024-03-07 09:22:50.663 [info] Extension signature verification is not done: eamodio.gitlens
+2024-03-07 09:22:51.140 [info] Extracted extension to file:///home/mgr/.vscode-oss/extensions/eamodio.gitlens-14.9.0-universal: eamodio.gitlens
+2024-03-07 09:22:51.159 [info] Renamed to /home/mgr/.vscode-oss/extensions/eamodio.gitlens-14.9.0-universal
+2024-03-07 09:22:51.164 [info] Extracting extension completed. eamodio.gitlens
+2024-03-07 09:22:51.181 [info] Extension installed successfully: eamodio.gitlens
+2024-03-07 09:22:51.192 [info] Marked extension as uninstalled eamodio.gitlens-14.8.2-universal
+2024-03-07 09:22:51.253 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/mgr/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/mgr/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:35849)
+    at a (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:35983)
+    at s.toFileSystemProviderError (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:47852)
+    at s.stat (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:38447)
+    at async C.stat (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:20932)
+    at async Y.onDidFilesChange (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:12681)

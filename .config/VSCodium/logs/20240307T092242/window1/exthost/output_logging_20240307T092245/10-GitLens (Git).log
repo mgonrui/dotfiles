@@ -1,0 +1,28 @@
+[2024-03-07 08:22:46.561] [     92ms] [/home/mgr/42programs] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /run/current-system/sw/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2024-03-07 08:22:46.676] [     21ms] [/home/mgr/42programs/trial03/c00/ex08] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /run/current-system/sw/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2024-03-07 08:23:17.150] [     14ms] [/home/mgr/42programs/trial02/c02/ex11] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /run/current-system/sw/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+
+[2024-03-07 08:24:51.701] [     15ms] [/home/mgr/42programs/trial03/c02/ex11] git rev-parse --show-toplevel • FAILED
+
+Error: Command failed: /run/current-system/sw/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+
+

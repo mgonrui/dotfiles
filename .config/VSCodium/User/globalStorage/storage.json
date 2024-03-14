@@ -71,11 +71,14 @@
             "file:///home/mgr/projects/code/books/sicp": "__default__profile__",
             "file:///home/mgr/projects/code/books/cprogrammingamodernapproach": "__default__profile__",
             "file:///home/mgr/projects/code/books/beautiful_racket": "__default__profile__",
-            "file:///home/mgr/42programs": "__default__profile__",
             "file:///home/mgr/.config/VSCodium": "__default__profile__",
-            "file:///home/mgr/.scripts": "__default__profile__"
+            "file:///home/mgr/.scripts": "__default__profile__",
+            "file:///home/mgr/downloads/pcnixos": "__default__profile__",
+            "file:///home/mgr/42programs": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1710406331197": "__default__profile__"
+        }
     },
     "profileAssociationsMigration": true,
     "telemetry.machineId": "f9c4f5af98170282b13eb1685b2dcd70677b51941770ad9e7b4ead234b749cc6",
@@ -95,18 +98,21 @@
                 "folderUri": "file:///home/mgr/.config/VSCodium"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1710406331197"
+            }
+        ]
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/mgr/.scripts",
-            "backupPath": "/home/mgr/.config/VSCodium/Backups/59aa18269d30788d7fb21c83ba0dd7c4",
+            "backupPath": "/home/mgr/.config/VSCodium/Backups/1710406331197",
             "uiState": {
                 "mode": 1,
-                "x": 1285,
-                "y": 45,
-                "width": 1430,
-                "height": 850
+                "x": 3,
+                "y": 43,
+                "width": 1910,
+                "height": 1030
             }
         },
         "openedWindows": []

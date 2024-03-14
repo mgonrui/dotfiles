@@ -1,0 +1,39 @@
+2024-03-13 09:10:52.270 [info] Deleted uninstalled extension from disk eamodio.gitlens /home/mgr/.vscode-oss/extensions/eamodio.gitlens-14.8.2-universal
+2024-03-13 09:10:55.284 [info] Getting Manifest... catppuccin.catppuccin-vsc
+2024-03-13 09:10:55.292 [info] Getting Manifest... jnoortheen.nix-ide
+2024-03-13 09:10:55.293 [info] Getting Manifest... mkhl.direnv
+2024-03-13 09:10:55.974 [info] Installing extension: catppuccin.catppuccin-vsc
+2024-03-13 09:10:55.985 [info] Installing extension: jnoortheen.nix-ide
+2024-03-13 09:10:55.987 [info] Installing extension: mkhl.direnv
+2024-03-13 09:10:57.363 [info] Extension signature verification is not done: mkhl.direnv
+2024-03-13 09:10:57.393 [info] Extracted extension to file:///home/mgr/.vscode-oss/extensions/mkhl.direnv-0.17.0-universal: mkhl.direnv
+2024-03-13 09:10:57.398 [info] Renamed to /home/mgr/.vscode-oss/extensions/mkhl.direnv-0.17.0-universal
+2024-03-13 09:10:57.400 [info] Extracting extension completed. mkhl.direnv
+2024-03-13 09:10:57.414 [info] Extension installed successfully: mkhl.direnv
+2024-03-13 09:10:57.421 [info] Marked extension as uninstalled mkhl.direnv-0.16.0-universal
+2024-03-13 09:10:57.488 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/mgr/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/mgr/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:35849)
+    at a (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:35983)
+    at s.toFileSystemProviderError (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:47852)
+    at s.stat (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:38447)
+    at async C.stat (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:20932)
+    at async Y.onDidFilesChange (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:12681)
+2024-03-13 09:10:57.491 [info] Extension signature verification is not done: catppuccin.catppuccin-vsc
+2024-03-13 09:10:57.514 [info] Extracted extension to file:///home/mgr/.vscode-oss/extensions/catppuccin.catppuccin-vsc-3.12.0-universal: catppuccin.catppuccin-vsc
+2024-03-13 09:10:57.518 [info] Renamed to /home/mgr/.vscode-oss/extensions/catppuccin.catppuccin-vsc-3.12.0-universal
+2024-03-13 09:10:57.520 [info] Extracting extension completed. catppuccin.catppuccin-vsc
+2024-03-13 09:10:57.539 [info] Extension installed successfully: catppuccin.catppuccin-vsc
+2024-03-13 09:10:57.544 [info] Marked extension as uninstalled catppuccin.catppuccin-vsc-3.11.2-universal
+2024-03-13 09:10:57.698 [info] Extension signature verification is not done: jnoortheen.nix-ide
+2024-03-13 09:10:57.731 [info] Extracted extension to file:///home/mgr/.vscode-oss/extensions/jnoortheen.nix-ide-0.3.1-universal: jnoortheen.nix-ide
+2024-03-13 09:10:57.735 [info] Renamed to /home/mgr/.vscode-oss/extensions/jnoortheen.nix-ide-0.3.1-universal
+2024-03-13 09:10:57.737 [info] Extracting extension completed. jnoortheen.nix-ide
+2024-03-13 09:10:57.750 [info] Extension installed successfully: jnoortheen.nix-ide
+2024-03-13 09:10:57.757 [info] Marked extension as uninstalled jnoortheen.nix-ide-0.2.2-universal
+2024-03-13 09:10:57.820 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/home/mgr/.vscode-oss/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/mgr/.vscode-oss/extensions/extensions.json.vsctmp'
+    at r.create (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:35849)
+    at a (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:51:35983)
+    at s.toFileSystemProviderError (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:47852)
+    at s.stat (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:38447)
+    at async C.stat (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:56:20932)
+    at async Y.onDidFilesChange (/nix/store/c3g0vkzk3k4kqxpjv23vmyv4pjyn7jcx-vscodium-1.84.2.23317/lib/vscode/resources/app/out/vs/code/node/sharedProcess/sharedProcessMain.js:109:12681)
