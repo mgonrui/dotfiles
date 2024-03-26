@@ -1,0 +1,9 @@
+2024-03-25 22:21:58.668 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2024-03-25 22:22:03.348 [info] [perf] Render performance baseline is 83ms
+2024-03-25 22:32:29.838 [error] [text file model] handleSaveError(93) - exit - resulted in a save error: Error: Unable to write file '/home/mgr/.scripts/autostart.sh' (Error: File Modified Since) file:///home/mgr/.scripts/autostart.sh
+2024-03-25 22:32:36.521 [error] [text file model] handleSaveError(93) - exit - resulted in a save error: Error: Unable to write file '/home/mgr/.scripts/autostart.sh' (Error: File Modified Since) file:///home/mgr/.scripts/autostart.sh
+2024-03-25 22:32:37.897 [error] [text file model] handleSaveError(93) - exit - resulted in a save error: Error: Unable to write file '/home/mgr/.scripts/autostart.sh' (Error: File Modified Since) file:///home/mgr/.scripts/autostart.sh
+2024-03-25 22:35:30.249 [warning] [lifecycle] onBeforeShutdown is taking a long time, pending operations: veto.backups
+2024-03-25 22:35:30.375 [warning] [backup tracker] suspended, ignoring dirty change event file:///home/mgr/.scripts/menu/killterm.sh 
+2024-03-25 22:35:31.926 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
+2024-03-25 22:35:36.125 [info] [perf] Render performance baseline is 50ms

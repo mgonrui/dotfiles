@@ -72,22 +72,19 @@
             "file:///home/mgr/projects/code/books/cprogrammingamodernapproach": "__default__profile__",
             "file:///home/mgr/projects/code/books/beautiful_racket": "__default__profile__",
             "file:///home/mgr/.config/VSCodium": "__default__profile__",
-            "file:///home/mgr/.scripts": "__default__profile__",
             "file:///home/mgr/downloads/pcnixos": "__default__profile__",
-            "file:///home/mgr/42programs": "__default__profile__"
+            "file:///home/mgr/42programs": "__default__profile__",
+            "file:///home/mgr/.dotfiles/.config/VSCodium": "__default__profile__",
+            "file:///home/mgr/.scripts": "__default__profile__",
+            "file:///home/mgr/.dotfiles": "__default__profile__"
         },
-        "emptyWindows": {
-            "1710406331197": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "profileAssociationsMigration": true,
     "telemetry.machineId": "f9c4f5af98170282b13eb1685b2dcd70677b51941770ad9e7b4ead234b749cc6",
     "backupWorkspaces": {
         "workspaces": [],
         "folders": [
-            {
-                "folderUri": "file:///home/mgr/.scripts"
-            },
             {
                 "folderUri": "file:///home/mgr/42programs/trial02"
             },
@@ -96,23 +93,26 @@
             },
             {
                 "folderUri": "file:///home/mgr/.config/VSCodium"
+            },
+            {
+                "folderUri": "file:///home/mgr/.scripts"
+            },
+            {
+                "folderUri": "file:///home/mgr/.dotfiles"
             }
         ],
-        "emptyWindows": [
-            {
-                "backupFolder": "1710406331197"
-            }
-        ]
+        "emptyWindows": []
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/mgr/.config/VSCodium/Backups/1710406331197",
+            "folder": "file:///home/mgr/.dotfiles",
+            "backupPath": "/home/mgr/.config/VSCodium/Backups/4eb4a09f63a402e7937e4292705b39cf",
             "uiState": {
                 "mode": 1,
                 "x": 3,
                 "y": 43,
-                "width": 1910,
-                "height": 1030
+                "width": 1270,
+                "height": 974
             }
         },
         "openedWindows": []
