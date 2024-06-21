@@ -19,8 +19,6 @@
             "file:///home/mgr/.config/doom": "__default__profile__",
             "file:///nix/store/6d9k7sgijwxj1vn6f62vany4dkm01lxq-user-environment/etc/xdg/surfraw": "__default__profile__",
             "file:///home/mgr/.config/imsettings": "__default__profile__",
-            "file:///home/mgr/.config": "__default__profile__",
-            "file:///home/mgr/.config/neofetch": "__default__profile__",
             "file:///home/mgr/cprogrammingamodernapproach/exercises": "__default__profile__",
             "file:///home/mgr/.config/oldnvim": "__default__profile__",
             "file:///home/mgr/.config/dmenu/patches": "__default__profile__",
@@ -62,7 +60,6 @@
             "file:///home/mgr/42programs/trial02": "__default__profile__",
             "file:///home/mgr/.scripts/buku": "__default__profile__",
             "file:///home/mgr/42programs/c10": "__default__profile__",
-            "file:///home/mgr/.scripts/menu": "__default__profile__",
             "file:///home/mgr/42programs/trial03": "__default__profile__",
             "file:///home/mgr/documents/library/Unknown/42%20control%20identidad%20%28165%29": "__default__profile__",
             "file:///home/mgr/documents/library/Unknown/42%20control%20identidad%20%28165%29/data": "__default__profile__",
@@ -73,9 +70,22 @@
             "file:///home/mgr/projects/code/books/beautiful_racket": "__default__profile__",
             "file:///home/mgr/.config/VSCodium": "__default__profile__",
             "file:///home/mgr/downloads/pcnixos": "__default__profile__",
-            "file:///home/mgr/42programs": "__default__profile__",
             "file:///home/mgr/.dotfiles/.config/VSCodium": "__default__profile__",
+            "file:///home/mgr/.config": "__default__profile__",
+            "file:///home/mgr/.config/neofetch": "__default__profile__",
+            "file:///home/mgr/documents/library/Lucius%20Annaeus%20Seneca%3B%20translated%20by%20Margaret%20Graver/Seneca_%20Letters%20on%20Ethics%20To%20Lucilius%20%28171%29": "__default__profile__",
+            "file:///home/mgr/documents/library/Saraswati%2C%20Swami%20Satyananda/Yoga%20Nidra%20%28129%29": "__default__profile__",
+            "file:///home/mgr/documents/library/Platon/Dialogos%20I%20%28191%29": "__default__profile__",
+            "file:///home/mgr/.scripts/menu": "__default__profile__",
             "file:///home/mgr/.scripts": "__default__profile__",
+            "file:///home/mgr/42programs/libft": "__default__profile__",
+            "file:///home/mgr/42programs": "__default__profile__",
+            "file:///home/mgr/42projects": "__default__profile__",
+            "file:///home/mgr/.config/eww": "__default__profile__",
+            "file:///home/mgr/.config/polybar": "__default__profile__",
+            "file:///home/mgr/.config/i3blocks": "__default__profile__",
+            "file:///home/mgr/.config/i3": "__default__profile__",
+            "file:///home/mgr/42projects/libft": "__default__profile__",
             "file:///home/mgr/.dotfiles": "__default__profile__"
         },
         "emptyWindows": {}
@@ -86,16 +96,19 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/mgr/42programs/trial02"
-            },
-            {
                 "folderUri": "file:///home/mgr/projects/code/books/sicp"
             },
             {
                 "folderUri": "file:///home/mgr/.config/VSCodium"
             },
             {
-                "folderUri": "file:///home/mgr/.scripts"
+                "folderUri": "file:///home/mgr/.config/i3blocks"
+            },
+            {
+                "folderUri": "file:///home/mgr/.config/i3"
+            },
+            {
+                "folderUri": "file:///home/mgr/42projects/libft"
             },
             {
                 "folderUri": "file:///home/mgr/.dotfiles"
@@ -109,37 +122,28 @@
             "backupPath": "/home/mgr/.config/VSCodium/Backups/4eb4a09f63a402e7937e4292705b39cf",
             "uiState": {
                 "mode": 1,
-                "x": 3,
-                "y": 43,
-                "width": 1270,
-                "height": 974
+                "x": 0,
+                "y": 0,
+                "width": 1280,
+                "height": 1024
             }
         },
         "openedWindows": []
     },
     "theme": "vs-dark",
-    "themeBackground": "#202020",
+    "themeBackground": "#1f1f1f",
     "windowSplash": {
-        "zoomLevel": 2,
+        "zoomLevel": 0,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#a89984",
-            "background": "#202020",
-            "editorBackground": "#202020",
-            "titleBarBackground": "#202020",
-            "activityBarBackground": "#04bbf3",
-            "sideBarBackground": "#202020",
-            "statusBarBackground": "#202020",
-            "statusBarNoFolderBackground": "#202020"
-        },
-        "layoutInfo": {
-            "sideBarSide": "left",
-            "editorPartMinWidth": 220,
-            "titleBarHeight": 30,
-            "activityBarWidth": 0,
-            "sideBarWidth": 0,
-            "statusBarHeight": 22,
-            "windowBorder": false
+            "foreground": "#cccccc",
+            "background": "#1f1f1f",
+            "editorBackground": "#1f1f1f",
+            "titleBarBackground": "#181818",
+            "activityBarBackground": "#181818",
+            "sideBarBackground": "#181818",
+            "statusBarBackground": "#181818",
+            "statusBarNoFolderBackground": "#1f1f1f"
         }
     },
     "lastKnownMenubarData": {
