@@ -1,0 +1,43 @@
+2024-07-11 13:50:33.616 [info] Extension host with pid 3286 started
+2024-07-11 13:50:33.748 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-11 13:50:33.763 [info] ExtensionService#_doActivateExtension arrterian.nix-env-selector, startup: false, activationEvent: 'onLanguage'
+2024-07-11 13:50:33.844 [info] ExtensionService#_doActivateExtension mkhl.direnv, startup: false, activationEvent: 'onLanguage'
+2024-07-11 13:50:33.901 [error] Activating extension arrterian.nix-env-selector failed due to an error:
+2024-07-11 13:50:33.902 [error] TypeError: The "path" argument must be of type string or an instance of Buffer or URL. Received null
+	at Object.readdir (node:fs:1462:10)
+	at t.readdir (node:electron/js2c/node_init:2:10631)
+	at ext.actions.get_nix_files (/home/mgr/.vscode-oss/extensions/arrterian.nix-env-selector-1.0.11-universal/dist/main.js:2631:358)
+	at activate (/home/mgr/.vscode-oss/extensions/arrterian.nix-env-selector-1.0.11-universal/dist/main.js:2650:268)
+	at K._callActivateOptional (/usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:17253)
+	at K._callActivate (/usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:16914)
+	at /usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:159:14618
+	at async a._activate (/usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:7970)
+	at async a._waitForDepsThenActivate (/usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:7912)
+	at async a._initialize (/usr/share/codium/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:143:7276)
+2024-07-11 13:50:34.090 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-11 13:50:34.095 [info] ExtensionService#_doActivateExtension artlaman.chalice-icon-theme, startup: true, activationEvent: '*'
+2024-07-11 13:50:34.102 [info] ExtensionService#_doActivateExtension kamikillerto.vscode-colorize, startup: true, activationEvent: '*'
+2024-07-11 13:50:34.171 [info] ExtensionService#_doActivateExtension KnisterPeter.vscode-github, startup: true, activationEvent: '*'
+2024-07-11 13:50:34.466 [info] ExtensionService#_doActivateExtension oderwat.indent-rainbow, startup: true, activationEvent: '*'
+2024-07-11 13:50:34.503 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-11 13:50:34.538 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-11 13:50:34.603 [info] Eager extensions activated
+2024-07-11 13:50:34.660 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.665 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.680 [info] ExtensionService#_doActivateExtension eamodio.gitlens, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.754 [info] ExtensionService#_doActivateExtension formulahendry.code-runner, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.806 [info] ExtensionService#_doActivateExtension maziac.asm-code-lens, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.818 [info] ExtensionService#_doActivateExtension monokai.theme-monokai-pro-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.823 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.839 [info] ExtensionService#_doActivateExtension sainnhe.gruvbox-material, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.867 [info] ExtensionService#_doActivateExtension vadimcn.vscode-lldb, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:34.878 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2024-07-11 13:50:35.273 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2024-07-11 13:50:35.537 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-11 13:50:35.573 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-11 13:51:12.100 [warning] TextEditor is closed/disposed
+2024-07-11 13:51:12.106 [warning] TextEditor is closed/disposed
+2024-07-11 13:51:12.106 [warning] TextEditor is closed/disposed
+2024-07-11 13:51:12.122 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-07-11 13:51:12.122 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model1)
+2024-07-11 13:51:24.125 [info] ExtensionService#_doActivateExtension jnoortheen.nix-ide, startup: false, activationEvent: 'onLanguage:nix'

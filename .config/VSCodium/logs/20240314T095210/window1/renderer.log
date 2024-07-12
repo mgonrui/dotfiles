@@ -1,6 +1,0 @@
-2024-03-14 09:52:12.618 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2024-03-14 09:52:12.698 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/mgr/.config/zsh/aliases.sh","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
-2024-03-14 09:52:15.219 [error] MainThreadFileSystemEventService#$watch(): failed to stat a resource for file watching (extension: eamodio.gitlens, path: file:///home/mgr/.git, recursive: true, session: 0.3874603116117761): EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/home/mgr/.git'
-2024-03-14 09:52:16.445 [info] [perf] Render performance baseline is 111ms
-2024-03-14 10:11:36.079 [warning] Via 'product.json#extensionEnabledApiProposals' extension 'ms-dotnettools.dotnet-interactive-vscode' wants API proposal 'languageConfigurationAutoClosingPairs' but that proposal DOES NOT EXIST. Likely, the proposal has been finalized (check 'vscode.d.ts') or was abandoned.
-2024-03-14 10:11:40.782 [info] [perf] Render performance baseline is 117ms

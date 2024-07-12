@@ -1,0 +1,8 @@
+2024-07-11 13:50:35.534 [info] /home/mgr/.config/VSCodium/User/settings.json closed
+2024-07-11 13:50:35.635 [info] Configuration changed
+2024-07-11 13:50:35.640 [info] /home/mgr/.config/VSCodium/User/settings.json closed
+2024-07-11 13:51:12.068 [info] Executing :q
+2024-07-11 13:51:12.106 [info] /home/mgr/.scripts/hosts.sh closed
+2024-07-11 13:51:12.106 [warning] getLineLength() called with out-of-bounds line 0
+2024-07-11 13:51:12.106 [warning] getLineLength() called with out-of-bounds line 0
+2024-07-11 13:51:23.884 [info] Active editor: file:///home/mgr/.config/hosts.nix

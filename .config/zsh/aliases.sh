@@ -15,15 +15,7 @@ alias bgrep="b --print | grep -A 2 -B 2"
 alias www="$BROWSER"
 alias pomowork="pomodoro 'work'"
 alias pomobreak="pomodoro 'break'"
-
-
-# change config path for programs that cant really change it
-# alias firefox="env HOME=/home/mgr/.config firefox"
-alias librewolf="env HOME=/home/mgr/.config librewolf"
-alias thunderbird="env HOME=/home/mgr/.config thunderbird"
-alias zotero="env HOME=/home/mgr/.config zotero"
-# alias codium="distrobox enter arch -- codium --reuse-window"
+alias paco="$HOME/francinette/tester.sh -in"
+alias vim="nvim"
 alias vs="codium --reuse-window"
-alias arduino="env HOME=/home/mgr/.config arduino"
-alias logseq="env HOME=/home/mgr/.config logseq"
-alias ghidra="env HOME=/home/mgr/.config ghidra"
+

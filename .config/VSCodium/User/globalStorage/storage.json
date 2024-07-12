@@ -22,7 +22,6 @@
             "file:///home/mgr/cprogrammingamodernapproach/exercises": "__default__profile__",
             "file:///home/mgr/.config/oldnvim": "__default__profile__",
             "file:///home/mgr/.config/dmenu/patches": "__default__profile__",
-            "file:///home/mgr/.scripts/fzf": "__default__profile__",
             "file:///home/mgr/42programs/c01/ex00": "__default__profile__",
             "file:///home/mgr/.config/.mozilla/firefox/i9zsq6a7.PrivateBrowsingV2": "__default__profile__",
             "file:///home/mgr/.config/calibre": "__default__profile__",
@@ -51,7 +50,6 @@
             "file:///home/mgr/42programs/trial02/c01": "__default__profile__",
             "file:///home/mgr/.scripts/firefox_downloads_management": "__default__profile__",
             "file:///home/mgr/42programs/trial02/c04": "__default__profile__",
-            "file:///home/mgr/.mozilla/firefox/i9zsq6a7.PrivateBrowsingV2": "__default__profile__",
             "file:///home/mgr/downloads/torrents/completed": "__default__profile__",
             "file:///home/mgr/documents/library/William%20Shotts/The%20Linux%20Command%20Line%20%2886%29": "__default__profile__",
             "file:///home/mgr/syncthing/huawei_tablet": "__default__profile__",
@@ -63,7 +61,6 @@
             "file:///home/mgr/42programs/trial03": "__default__profile__",
             "file:///home/mgr/documents/library/Unknown/42%20control%20identidad%20%28165%29": "__default__profile__",
             "file:///home/mgr/documents/library/Unknown/42%20control%20identidad%20%28165%29/data": "__default__profile__",
-            "file:///home/mgr": "__default__profile__",
             "file:///home/mgr/.config/zsh": "__default__profile__",
             "file:///home/mgr/projects/code/books/sicp": "__default__profile__",
             "file:///home/mgr/projects/code/books/cprogrammingamodernapproach": "__default__profile__",
@@ -76,19 +73,25 @@
             "file:///home/mgr/documents/library/Lucius%20Annaeus%20Seneca%3B%20translated%20by%20Margaret%20Graver/Seneca_%20Letters%20on%20Ethics%20To%20Lucilius%20%28171%29": "__default__profile__",
             "file:///home/mgr/documents/library/Saraswati%2C%20Swami%20Satyananda/Yoga%20Nidra%20%28129%29": "__default__profile__",
             "file:///home/mgr/documents/library/Platon/Dialogos%20I%20%28191%29": "__default__profile__",
-            "file:///home/mgr/.scripts/menu": "__default__profile__",
-            "file:///home/mgr/.scripts": "__default__profile__",
             "file:///home/mgr/42programs/libft": "__default__profile__",
             "file:///home/mgr/42programs": "__default__profile__",
-            "file:///home/mgr/42projects": "__default__profile__",
             "file:///home/mgr/.config/eww": "__default__profile__",
             "file:///home/mgr/.config/polybar": "__default__profile__",
             "file:///home/mgr/.config/i3blocks": "__default__profile__",
-            "file:///home/mgr/.config/i3": "__default__profile__",
+            "file:///home/mgr/.dotfiles": "__default__profile__",
+            "file:///home/mgr/.mozilla/firefox/i9zsq6a7.PrivateBrowsingV2": "__default__profile__",
+            "file:///home/mgr/.scripts": "__default__profile__",
+            "file:///home/mgr/42projects": "__default__profile__",
+            "file:///home/mgr/.scripts/menu": "__default__profile__",
+            "file:///home/mgr": "__default__profile__",
             "file:///home/mgr/42projects/libft": "__default__profile__",
-            "file:///home/mgr/.dotfiles": "__default__profile__"
+            "file:///home/mgr/.config/i3": "__default__profile__",
+            "file:///home/mgr/sway-launcher-desktop": "__default__profile__",
+            "file:///home/mgr/.scripts/fzf": "__default__profile__"
         },
-        "emptyWindows": {}
+        "emptyWindows": {
+            "1720698630852": "__default__profile__"
+        }
     },
     "profileAssociationsMigration": true,
     "telemetry.machineId": "f9c4f5af98170282b13eb1685b2dcd70677b51941770ad9e7b4ead234b749cc6",
@@ -100,50 +103,50 @@
             },
             {
                 "folderUri": "file:///home/mgr/.config/VSCodium"
-            },
-            {
-                "folderUri": "file:///home/mgr/.config/i3blocks"
-            },
-            {
-                "folderUri": "file:///home/mgr/.config/i3"
-            },
-            {
-                "folderUri": "file:///home/mgr/42projects/libft"
-            },
-            {
-                "folderUri": "file:///home/mgr/.dotfiles"
             }
         ],
-        "emptyWindows": []
+        "emptyWindows": [
+            {
+                "backupFolder": "1720698630852"
+            }
+        ]
     },
     "windowsState": {
         "lastActiveWindow": {
-            "folder": "file:///home/mgr/.dotfiles",
-            "backupPath": "/home/mgr/.config/VSCodium/Backups/4eb4a09f63a402e7937e4292705b39cf",
+            "backupPath": "/home/mgr/.config/VSCodium/Backups/1720698630852",
             "uiState": {
                 "mode": 1,
                 "x": 0,
-                "y": 0,
-                "width": 1280,
-                "height": 1024
+                "y": 27,
+                "width": 1920,
+                "height": 1053
             }
         },
         "openedWindows": []
     },
     "theme": "vs-dark",
-    "themeBackground": "#1f1f1f",
+    "themeBackground": "#202020",
     "windowSplash": {
-        "zoomLevel": 0,
+        "zoomLevel": 2,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#cccccc",
-            "background": "#1f1f1f",
-            "editorBackground": "#1f1f1f",
-            "titleBarBackground": "#181818",
-            "activityBarBackground": "#181818",
-            "sideBarBackground": "#181818",
-            "statusBarBackground": "#181818",
-            "statusBarNoFolderBackground": "#1f1f1f"
+            "foreground": "#a89984",
+            "background": "#202020",
+            "editorBackground": "#202020",
+            "titleBarBackground": "#202020",
+            "activityBarBackground": "#04bbf3",
+            "sideBarBackground": "#202020",
+            "statusBarBackground": "#202020",
+            "statusBarNoFolderBackground": "#202020"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 30,
+            "activityBarWidth": 0,
+            "sideBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
         }
     },
     "lastKnownMenubarData": {
@@ -1848,5 +1851,6 @@
             }
         }
     },
-    "telemetry.sqmId": ""
+    "telemetry.sqmId": "",
+    "telemetry.devDeviceId": "a2fc4cb9-6280-4e94-8f09-ba1378711852"
 }
