@@ -76,7 +76,6 @@
             "file:///home/mgr/42programs/libft": "__default__profile__",
             "file:///home/mgr/42programs": "__default__profile__",
             "file:///home/mgr/.config/eww": "__default__profile__",
-            "file:///home/mgr/.config/polybar": "__default__profile__",
             "file:///home/mgr/.config/i3blocks": "__default__profile__",
             "file:///home/mgr/.dotfiles": "__default__profile__",
             "file:///home/mgr/.mozilla/firefox/i9zsq6a7.PrivateBrowsingV2": "__default__profile__",
@@ -84,13 +83,17 @@
             "file:///home/mgr/42projects": "__default__profile__",
             "file:///home/mgr/.scripts/menu": "__default__profile__",
             "file:///home/mgr": "__default__profile__",
-            "file:///home/mgr/42projects/libft": "__default__profile__",
             "file:///home/mgr/.config/i3": "__default__profile__",
             "file:///home/mgr/sway-launcher-desktop": "__default__profile__",
-            "file:///home/mgr/.scripts/fzf": "__default__profile__"
+            "file:///home/mgr/.scripts/fzf": "__default__profile__",
+            "file:///home/mgr/.dotfiles/.config/zellij": "__default__profile__",
+            "file:///home/mgr/.dotfiles/.config": "__default__profile__",
+            "file:///home/mgr/libft": "__default__profile__",
+            "file:///home/mgr/.config/polybar": "__default__profile__",
+            "file:///home/mgr/42projects/libft": "__default__profile__"
         },
         "emptyWindows": {
-            "1720698630852": "__default__profile__"
+            "1720975622873": "__default__profile__"
         }
     },
     "profileAssociationsMigration": true,
@@ -99,45 +102,42 @@
         "workspaces": [],
         "folders": [
             {
-                "folderUri": "file:///home/mgr/projects/code/books/sicp"
-            },
-            {
                 "folderUri": "file:///home/mgr/.config/VSCodium"
             }
         ],
         "emptyWindows": [
             {
-                "backupFolder": "1720698630852"
+                "backupFolder": "1720975622873"
             }
         ]
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/mgr/.config/VSCodium/Backups/1720698630852",
+            "backupPath": "/home/mgr/.config/VSCodium/Backups/1720975622873",
             "uiState": {
                 "mode": 1,
-                "x": 0,
-                "y": 27,
-                "width": 1920,
-                "height": 1053
+                "x": 7,
+                "y": 47,
+                "width": 1266,
+                "height": 970
             }
         },
         "openedWindows": []
     },
     "theme": "vs-dark",
-    "themeBackground": "#202020",
+    "themeBackground": "#2d353b",
     "windowSplash": {
         "zoomLevel": 2,
         "baseTheme": "vs-dark",
         "colorInfo": {
-            "foreground": "#a89984",
-            "background": "#202020",
-            "editorBackground": "#202020",
-            "titleBarBackground": "#202020",
+            "foreground": "#9aa79d",
+            "background": "#2d353b",
+            "editorBackground": "#2d353b",
+            "titleBarBackground": "#2d353b",
             "activityBarBackground": "#04bbf3",
-            "sideBarBackground": "#202020",
-            "statusBarBackground": "#202020",
-            "statusBarNoFolderBackground": "#202020"
+            "sideBarBackground": "#2d353b",
+            "statusBarBackground": "#2d353b",
+            "statusBarNoFolderBackground": "#2d353b"
         },
         "layoutInfo": {
             "sideBarSide": "left",

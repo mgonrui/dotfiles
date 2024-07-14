@@ -1,0 +1,26 @@
+layout {
+    tab name="terminal" focus=true {
+    	pane {
+    		name "terminal" 
+		borderless true
+		focus true
+    	}
+    }
+    tab name="yazi" {
+	pane {
+    		name "yazi" 
+		borderless true
+		split_direction "horizontal"
+		command "yazi"
+	}
+    }
+    tab name="htop" {
+	pane {
+    		name "htop" 
+		borderless true
+		split_direction "horizontal"
+		command "htop"
+	}
+    }
+}
+

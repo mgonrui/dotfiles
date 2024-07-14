@@ -1,8 +1,8 @@
 #export TMOUT=50
 export ZDOTDIR=$HOME/.config/zsh
 # hook direnv to zsh
-eval "$(direnv hook zsh)"
-export DIRENV_LOG_FORMAT=""
+#eval "$(direnv hook zsh)"
+#export DIRENV_LOG_FORMAT=""
 #export DIRENV_WARN_TIMEOUT="100y"
 
 # start ssh-agent
@@ -60,6 +60,15 @@ function zle-keymap-select {
         echo -ne '\e[6 q'
     fi
 }
+
+fcd() {
+    cd "$HOME/$(find $HOME -type d -path '*/.cache' -prune -o -type d | cut -d/ -f4- | fzf)"
+
+}
+
+open() {
+    xdg-open "$HOME/$(find $HOME -type f | cut -d/ -f4- | fzf)"
+}
 zle -N zle-keymap-select
 zle-line-init() {
     zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
@@ -95,11 +104,15 @@ pomodoro () {
     fi
 }
 
+fpath() {
+    find -type f | fzf | sed 's/^..//g' | tr -d '\n' | xclip -selection c
+}
+
 
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 
+# launch starship
 eval "$(starship init zsh)"
-
 
 bmenu() {
 launchapp=$(IFS=':'; \
