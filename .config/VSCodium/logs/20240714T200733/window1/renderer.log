@@ -1,0 +1,5 @@
+2024-07-14 20:07:34.352 [info] Initial editor state {"filesToOpenOrCreate":[{"fileUri":{"$mid":1,"path":"/home/mgr/.config/zsh/.zshrc","scheme":"file"},"type":1,"exists":true,"options":{}}],"filesToDiff":[],"filesToMerge":[]}
+2024-07-14 20:07:34.675 [info] Started local extension host with pid 3239.
+2024-07-14 20:07:37.757 [info] [perf] Render performance baseline is 36ms
+2024-07-14 20:07:49.272 [error] [text file model] handleSaveError(2) - exit - resulted in a save error: Error: Unable to write file '/home/mgr/.config/zsh/.zshrc' (Error: File Modified Since) file:///home/mgr/.config/zsh/.zshrc
+2024-07-14 20:23:08.398 [error] [text file model] handleSaveError(19) - exit - resulted in a save error: Error: Unable to write file '/home/mgr/.config/zsh/.zshrc' (Error: File Modified Since) file:///home/mgr/.config/zsh/.zshrc

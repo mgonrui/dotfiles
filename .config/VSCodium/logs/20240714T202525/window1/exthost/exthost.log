@@ -1,0 +1,25 @@
+2024-07-14 20:25:27.286 [info] Extension host with pid 5450 started
+2024-07-14 20:25:27.644 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-07-14 20:25:27.712 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-07-14 20:25:27.794 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-07-14 20:25:27.842 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-07-14 20:25:27.921 [info] Eager extensions activated
+2024-07-14 20:25:27.950 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:27.952 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:27.958 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:27.961 [info] ExtensionService#_doActivateExtension monokai.theme-monokai-pro-vscode, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:27.969 [info] ExtensionService#_doActivateExtension sainnhe.everforest, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:27.979 [info] ExtensionService#_doActivateExtension sainnhe.gruvbox-material, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:27.999 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2024-07-14 20:25:29.113 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-14 20:25:29.117 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-14 20:25:29.144 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-07-14 20:25:46.505 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2024-07-14 20:26:27.376 [warning] TextEditor is closed/disposed
+2024-07-14 20:26:27.377 [warning] TextEditor is closed/disposed
+2024-07-14 20:26:27.424 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-07-14 20:26:27.429 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model4)
+2024-07-14 20:35:45.868 [warning] TextEditor is closed/disposed
+2024-07-14 20:35:45.868 [warning] TextEditor is closed/disposed
+2024-07-14 20:35:45.907 [warning] ExtHostTextEditorOptions 'setCursorStyle' failed:'
+2024-07-14 20:35:45.907 [warning] Illegal argument: TextEditor(vs.editor.ICodeEditor:1,$model5)

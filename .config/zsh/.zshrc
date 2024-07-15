@@ -1,9 +1,12 @@
 #export TMOUT=50
 export ZDOTDIR=$HOME/.config/zsh
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#d3c6aa,bg:#2d353b,hl:#7fbbb3 --color=fg+:#d3c6aa,bg+:#2d353b,hl+:#7fbbb3 --color=info:#afaf87,prompt:#e67e80,pointer:#d699b6 --color=marker:#a7c080,spinner:#d699b6,header:#87afaf'
 # hook direnv to zsh
 #eval "$(direnv hook zsh)"
 #export DIRENV_LOG_FORMAT=""
 #export DIRENV_WARN_TIMEOUT="100y"
+#
+#
 
 # start ssh-agent
 # [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" 
@@ -126,3 +129,4 @@ launchapp=$(IFS=':'; \
     --preview-window="down:wrap:3") \
   && bash -c "${launchapp}"
 }
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

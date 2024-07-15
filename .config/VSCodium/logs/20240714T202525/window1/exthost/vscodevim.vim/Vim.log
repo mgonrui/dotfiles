@@ -1,0 +1,21 @@
+2024-07-14 20:25:29.065 [info] Configuration changed
+2024-07-14 20:25:29.109 [info] /home/mgr/.config/VSCodium/User/settings.json closed
+2024-07-14 20:25:29.170 [info] /home/mgr/.config/VSCodium/User/settings.json closed
+2024-07-14 20:25:31.368 [info] Configuration changed
+2024-07-14 20:26:07.802 [info] Active editor: file:///home/mgr/.config/zsh/.zshrc
+2024-07-14 20:26:12.082 [info] Active editor: file:///home/mgr/.scripts/init.sh
+2024-07-14 20:26:19.547 [info] Active editor: file:///home/mgr/.config/zsh/.zshrc
+2024-07-14 20:26:24.143 [info] Executing :w
+2024-07-14 20:26:27.340 [info] Executing :wq
+2024-07-14 20:26:27.375 [info] /home/mgr/.config/zsh/.zshrc closed
+2024-07-14 20:26:27.376 [warning] getLineLength() called with out-of-bounds line 2
+2024-07-14 20:26:27.376 [warning] getLineLength() called with out-of-bounds line 2
+2024-07-14 20:26:27.386 [info] Active editor: file:///home/mgr/.scripts/init.sh
+2024-07-14 20:35:30.341 [info] Active editor: file:///home/mgr/.scripts/fzf/startmenu.sh
+2024-07-14 20:35:36.926 [info] Executing :w
+2024-07-14 20:35:42.161 [info] Executing :w
+2024-07-14 20:35:45.789 [info] Executing :q
+2024-07-14 20:35:45.867 [info] /home/mgr/.scripts/fzf/startmenu.sh closed
+2024-07-14 20:35:45.868 [warning] getLineLength() called with out-of-bounds line 0
+2024-07-14 20:35:45.868 [warning] invalid cursor position. [[0, 7] | [0, 7]].
+2024-07-14 20:35:45.874 [info] Active editor: file:///home/mgr/.scripts/init.sh

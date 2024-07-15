@@ -24,7 +24,6 @@
             "file:///home/mgr/.config/dmenu/patches": "__default__profile__",
             "file:///home/mgr/42programs/c01/ex00": "__default__profile__",
             "file:///home/mgr/.config/.mozilla/firefox/i9zsq6a7.PrivateBrowsingV2": "__default__profile__",
-            "file:///home/mgr/.config/calibre": "__default__profile__",
             "file:///home/mgr/42programs/c00": "__default__profile__",
             "file:///home/mgr/42programs/c01": "__default__profile__",
             "file:///home": "__default__profile__",
@@ -85,16 +84,16 @@
             "file:///home/mgr": "__default__profile__",
             "file:///home/mgr/.config/i3": "__default__profile__",
             "file:///home/mgr/sway-launcher-desktop": "__default__profile__",
-            "file:///home/mgr/.scripts/fzf": "__default__profile__",
             "file:///home/mgr/.dotfiles/.config/zellij": "__default__profile__",
             "file:///home/mgr/.dotfiles/.config": "__default__profile__",
             "file:///home/mgr/libft": "__default__profile__",
             "file:///home/mgr/.config/polybar": "__default__profile__",
-            "file:///home/mgr/42projects/libft": "__default__profile__"
+            "file:///home/mgr/42projects/libft": "__default__profile__",
+            "file:///home/mgr/.scripts/fzf": "__default__profile__",
+            "file:///home/mgr/.dotfiles/.config/alacritty": "__default__profile__",
+            "file:///home/mgr/.config/calibre": "__default__profile__"
         },
-        "emptyWindows": {
-            "1720975622873": "__default__profile__"
-        }
+        "emptyWindows": {}
     },
     "profileAssociationsMigration": true,
     "telemetry.machineId": "f9c4f5af98170282b13eb1685b2dcd70677b51941770ad9e7b4ead234b749cc6",
@@ -103,17 +102,21 @@
         "folders": [
             {
                 "folderUri": "file:///home/mgr/.config/VSCodium"
+            },
+            {
+                "folderUri": "file:///home/mgr/.config/calibre"
             }
         ],
         "emptyWindows": [
             {
-                "backupFolder": "1720975622873"
+                "backupFolder": "1720981525824"
             }
         ]
     },
     "windowsState": {
         "lastActiveWindow": {
-            "backupPath": "/home/mgr/.config/VSCodium/Backups/1720975622873",
+            "folder": "file:///home/mgr/.config/calibre",
+            "backupPath": "/home/mgr/.config/VSCodium/Backups/76df28ea1a86141d500ff6c903f58946",
             "uiState": {
                 "mode": 1,
                 "x": 7,
@@ -144,7 +147,7 @@
             "editorPartMinWidth": 220,
             "titleBarHeight": 30,
             "activityBarWidth": 0,
-            "sideBarWidth": 0,
+            "sideBarWidth": 170,
             "statusBarHeight": 22,
             "windowBorder": false
         }

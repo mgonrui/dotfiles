@@ -10,7 +10,7 @@ exec --no-startup-id $HOME/.scripts/init.sh
 # Load desktop wallpaper
 exec --no-startup-id nitrogen --restore
 # Load polybar
-exec --no-startup-id polybar --config=~/.config/polybar/floating_bar/config.ini
+exec --no-startup-id $HOME/.scripts/polybar.sh
 # Load picom
 exec --no-startup-id picom
 
