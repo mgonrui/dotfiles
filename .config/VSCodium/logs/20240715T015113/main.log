@@ -1,4 +1,0 @@
-2024-07-15 01:51:13.553 [info] update#setState disabled
-2024-07-15 01:51:13.555 [info] update#ctor - updates are disabled as there is no update URL
-2024-07-15 01:51:22.371 [info] Extension host with pid 5757 exited with code: 0, signal: unknown.
-2024-07-15 02:02:08.262 [error] CodeWindow: renderer process gone (reason: clean-exit, code: <unknown>)

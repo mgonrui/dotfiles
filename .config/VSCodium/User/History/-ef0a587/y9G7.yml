@@ -1,8 +1,0 @@
-dimensions:
-  columns: 800
-  lines: 240
-
-font:
-  normal:
-    family: 3270 Nerd Font Mono 20
-    style: Medium
