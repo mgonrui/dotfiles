@@ -18,4 +18,5 @@ alias pomobreak="pomodoro 'break'"
 alias paco="$HOME/francinette/tester.sh -in"
 alias vim="nvim"
 alias vs="codium --reuse-window"
-
+alias bt="sh $HOME/.scripts/fzf/bluetooth.sh"
+alias ws="setsid whatsapp-for-linux"

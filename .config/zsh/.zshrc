@@ -1,5 +1,7 @@
 #export TMOUT=50
+export LANG="en_US.UTF-8"
 export ZDOTDIR=$HOME/.config/zsh
+export PATH="$HOME/.config/emacs/bin:$PATH"
 # hook direnv to zsh
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""
@@ -113,3 +115,6 @@ launchapp=$(IFS=':'; \
     --preview-window="down:wrap:3") \
   && bash -c "${launchapp}"
 }
+
+# Created by `pipx` on 2024-10-20 16:46:56
+export PATH="$PATH:/home/mgr/.local/bin"

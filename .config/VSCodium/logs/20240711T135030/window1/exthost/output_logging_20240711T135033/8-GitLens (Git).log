@@ -1,6 +1,0 @@
-[2024-07-11 11:51:24.243] [     13ms] [/home/mgr/.config] git rev-parse --show-toplevel • FAILED
-
-Error: Command failed: /usr/bin/git -c core.quotepath=false -c color.ui=false rev-parse --show-toplevel
-fatal: not a git repository (or any of the parent directories): .git
-
-

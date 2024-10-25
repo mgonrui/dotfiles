@@ -1,8 +1,0 @@
-Emacs.Font: 3270 Nerd Font Mono:pixelsize=15000
-xprompt.font: 3270 Nerd Font Mono:pixelsize=26
-xprompt.background: #2e2c2b 
-xprompt.foreground: #d4be98
-xprompt.hoverbackground: #504945
-xprompt.selbackground: #504945
-xprompt.selforeground: #d4be98
-xprompt.border: #d4be98

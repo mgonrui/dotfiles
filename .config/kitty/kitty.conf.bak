@@ -2253,6 +2253,6 @@ map kitty_mod+k new_tab
 
 
 # BEGIN_KITTY_THEME
-# Gruvbox Dark
+# Everforest Dark Medium
 include current-theme.conf
 # END_KITTY_THEME

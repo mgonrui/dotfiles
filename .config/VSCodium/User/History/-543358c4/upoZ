@@ -1,3 +1,0 @@
-use nix shell.nix
-[global]
-warn_timeout = 0

@@ -1,3 +1,0 @@
-#!/bin/sh
-
-cat .cache/zsh/history | fzf --tac  | xclip --selection clipboard

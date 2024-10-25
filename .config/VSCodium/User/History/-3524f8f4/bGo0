@@ -1,9 +1,0 @@
-
-
-path=$(locate /home/mgr |  fzf -i -m --reverse --border --margin 10%)
-
-if [ -e "$path" ]; then
-	xdg-open >/dev/null 2>&1 "$path" &
-else
-	exit
-fi

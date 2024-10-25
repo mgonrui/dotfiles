@@ -1,5 +1,0 @@
-locate
-launcher
-bookmarks
-pdf
-surfraw
