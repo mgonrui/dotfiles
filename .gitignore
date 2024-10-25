@@ -1,9 +1,7 @@
-# .config/VSCodium/User/History
-# .config/VSCodium/User/snippets
-# .config/VSCodium/User/globalStorage
-# .config/VSCodium/User/workspaceStorage
-# .config/VSCodium/logs
-# .config/VSCodium/WebStorage
-
-VSCodium/
-!VSCodium/User
+.config/VSCodium/*
+.config/VSCodium/*/
+!.config/VSCodium/User
+.config/VSCodium/User/*
+.config/VSCodium/User/*/
+!.config/VSCodium/User/settings.json
+!.config/VSCodium/User/keybindings.json
