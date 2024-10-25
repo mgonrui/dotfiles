@@ -6,4 +6,4 @@
 # .config/VSCodium/WebStorage
 
 VSCodium/
-!VSCodium/User/*.json
+!VSCodium/User
