@@ -1,0 +1,2 @@
+dt = import "darktable"
+dt.storage.import("~/media/images/darktable/")

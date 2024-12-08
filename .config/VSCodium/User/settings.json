@@ -1,0 +1,192 @@
+{
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "clangd.path": "/home/mgr/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd",
+    "editor.fontFamily": "Agave Nerd Font",
+    "editor.inlayHints.fontFamily": "3270 Nerd Font ",
+    "editor.cursorBlinking": "solid",
+    "code-runner.runInTerminal": true,
+    "explorer.confirmDragAndDrop": false,
+    "debug.console.fontFamily": "3270 Nerd Font",
+    "scm.inputFontFamily": "3270 Nerd Font",
+    "editor.lineHeight": 18,
+    "editor.codeLensFontFamily": "Agave Nerd Font",
+    "editor.fontLigatures": false,
+    "editor.fontWeight": "normal",
+    "sonarlint.ls.javaHome": "/usr/lib/jvm/java-20-openjdk",
+    "window.titleBarStyle": "custom",
+    "gitlens.statusBar.alignment": "left",
+    "editor.suggest.showStatusBar": true,
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#04bbf3",
+        "titleBar.activeBackground": "#202020",
+        "titleBar.inactiveBackground": "#202020",
+        "titleBar.activeForeground": "#202020",
+        "titleBar.inactiveForeground": "#202020",
+        // "icon.foreground": "#91ff00",
+        "symbolIcon.colorForeground": "#ff0000",
+        "icon.colorForeground": "#ff0000",
+        "activityBar.inactiveForeground": "#d40707"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+        {
+            "scope": [
+            "comment",
+            "comment.block.documentation",
+            "comment.block.documentation.js",
+            "comment.line.double-slash.js",
+            "storage.type.class.jsdoc",
+            "entity.name.type.instance.jsdoc",
+            "variable.other.jsdoc",
+            "punctuation.definition.comment",
+            "punctuation.definition.comment.begin.documentation",
+            "punctuation.definition.comment.end.documentation"
+            ],
+            "settings": {
+            "fontStyle": "italic",
+            // "foreground": "#78108a"
+            }
+        }
+        ]
+    },
+    "workbench.iconTheme": "chalice-icon-theme",
+    "vscode-neovim.logPath": "/usr/local/bin/nvim",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "colorize.languages": [
+
+
+        "rc",
+        "python",
+        "c",
+        "css",
+        "sass",
+        "scss",
+        "less",
+        "postcss",
+        "sss",
+        "stylus",
+        "xml",
+        "svg"
+    ],
+    "colorize.include": [
+        "**/*rc",
+        "**/*.css",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.less",
+        "**/*.styl"
+    ],
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 4,
+    "code-runner.customCommand": "",
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+    "[c]": {
+        "editor.defaultFormatter": "keyhr.42-c-format"
+    },
+        
+
+
+    
+
+
+
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        // "c": "cd $dir && clang $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt ",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt | cat -e ",
+        "zig": "zig run",
+        "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName"
+    },
+    "code-runner.preserveFocus": false,
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.location": "hidden",
+    "clangd.checkUpdates": true,
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.errorSquiggles": "enabled",
+    "explorer.confirmDelete": false,
+    "workbench.editor.showTabs": "none",
+    "window.menuBarVisibility": "compact",
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "gruvboxMaterial.darkContrast": "hard",
+    "gruvboxMaterial.darkPalette": "original",
+    "gruvboxMaterial.lightContrast": "hard",
+    "gruvboxMaterial.lightPalette": "original",
+    "colorize.colorized_variables": [
+        
+        "CSS"
+    ],
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "c-cpp-flylint.clang.msExtensions": true,
+    "workbench.editor.tabCloseButton": "off",
+    "terminal.integrated.fontWeight": "normal",
+    "C_Cpp.default.cStandard": "c11",
+    "terminal.integrated.fontFamily": "Agave Nerd Font",
+    "terminal.integrated.tabs.enabled": false,
+    "window.zoomLevel": 2,
+    "editor.codeActionsOnSave": {},
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.editor.tabActionCloseVisibility": false,
+    "gitlens.blame.fontStyle": "normal>",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command"
+    ],
+    "editor.fontSize": 15,
+    "terminal.integrated.lineHeight": 1
+} 
