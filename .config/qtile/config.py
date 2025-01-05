@@ -11,7 +11,7 @@ mod = "mod4"
 ctrl = "control"
 alt = "mod1"
 terminal = "kitty"
-desktop_wallpaper="~/media/images/desktop_wallpapers/gruvbox/nature/forest-hut.png"
+wallpaper="~/media/images/desktop_wallpapers/gruvbox/nature/forest-hut.png"
 # colors
 bone         = "#c5aa7f"
 bg0          = "#282828" 
@@ -44,7 +44,6 @@ orange_soft  = "#FE8019"
 gray         = "#a89984" 
 gray_bg      = "#928374"
 
-
 # run script for setting configurations and opening programs at start
 @hook.subscribe.startup_once
 def autostart():
@@ -73,12 +72,12 @@ Key([mod, "shift"], "equal", lazy.spawn("strawberry -f")),
 Key([mod, "shift"], "minus", lazy.spawn("strawberry -r")),
 Key([mod, "shift"], "space", lazy.spawn("strawberry -t")),
 # switch between monitors and laptop screen
-Key([mod, ctrl], "s", lazy.spawn("/home/mgr/.scripts/switch_screens.sh")),
+Key([mod, ctrl], "s", lazy.spawn("sh $HOME/.scripts/switch_screens.sh")),
 # switch keyboard layout between us and spanish
-Key([mod, "shift"], "l", lazy.spawn("sh /home/mgr/.scripts/switch_keyboard_layout.sh")),
-Key([mod], "l", lazy.spawn("sh /home/mgr/.scripts/fzfmenu/emacsrestart.sh")),
+Key([mod, "shift"], "l", lazy.spawn("sh $HOME/.scripts/switch_keyboard_layout.sh")),
+Key([mod], "l", lazy.spawn("sh $HOME/.scripts/fzfmenu/emacsrestart.sh")),
 # reload qtile config
-Key([mod, ctrl], "r", lazy.reload_config(), lazy.spawn("sh /home/mgr/.scripts/keyboard_layout.sh")),
+Key([mod, ctrl], "r", lazy.reload_config(), lazy.spawn("sh $HOME/.scripts/keyboard_layout.sh")),
 # lock screen 
 Key([mod, ctrl], "l", lazy.spawn("xscreensaver-command -lock")),
 # quit qtile
@@ -255,172 +254,127 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [
-    # vga monitor
-    Screen(
-        wallpaper=desktop_wallpaper,
-        wallpaper_mode="fill",
-        top=bar.Bar(
-            [
-                widget.GroupBox(
-                    fontsize=22,
-                    # bar alignment
-                    margin_y=3,
-                    margin_x=3,
-                    padding_y=5,
-                    # separation between groups
-                    padding_x=5,
-                    spacing=3,
-                    center_aligned=True,
-                    borderwidth=0,
-                    active=fg0,
-                    inactive=bg4,
-                    rounded=True,
-                    use_mouse_wheel=False,
-                    disable_drag=True,
-                    #highlight_color=yellow_hard,
-                    highlight_method="block",
-                    # this_current_screen_border='#b57614',
-                    # this_screen_border=bg1,
-                    # other_current_screen_border=bg1,
-                    # other_screen_border=bg1,
-                ),
-                widget.Spacer(
-                ),
-                widget.Volume(
-                    fmt='{} 󰕾 ',
-                ),
-                widget.Spacer(
-                    length=15,
-                ),
-                widget.KeyboardLayout (
-                    fmt = "{} 󰌓 ",
-                ),
-                widget.Spacer(
-                    length=14,
-                ),
-                widget.Battery(
-                    format='{percent:2.0%} {char}',
-                    charge_char ='󰂄 ',
-                    discharge_char ='󰁹 ',
-                    full_char ='󰁹 ',
-                    unknown_char ='󰂄 ',
-                    update_interval = 1,
-                ),
-                widget.Spacer(
-                    length=6,
-                ),
 
-                widget.Memory(
-                    fmt=' {}  ',
-                    measure_mem='G',
-                    format='{MemUsed:.0f}{mm}',
-                    padding=4,
-                ),
-                
-                widget.Spacer(
-                    length=10,
-                ),
-
-                widget.Clock(
-                    format=" %a, %b %d 󰃵   %H:%M 󱑂  ",
-                ),
-                widget.Spacer(
-                    length=10,
-                ),
-            ],
-            40, #bar size
+def init_widgets_list():
+    widgets_list = [
+        widget.GroupBox(
+            fontsize=21,
+            # bar alignment
+            margin_y=3,
+            margin_x=3,
+            padding_y=5,
+            # separation between groups
+            padding_x=5,
+            spacing=3,
+            center_aligned=True,
+            borderwidth=0,
+            active=fg0,
+            inactive=bg4,
+            rounded=True,
+            use_mouse_wheel=False,
+            disable_drag=True,
+            mouse_callbacks={
+                "Button1":lazy.spawn(),    # left click
+                "Button2":lazy.spawn(),    # middle click
+                "Button3":lazy.spawn(),    # right click
+                "Button4":lazy.spawn(),    # scroll up
+                "Button5":lazy.spawn(),    # scroll down
+                "Button6":lazy.spawn(),    # scroll left
+                "Button7":lazy.spawn(),    # scroll right
+            },
+            #highlight_color=yellow_hard,
+            highlight_method="block",
+            # this_current_screen_border='#b57614',
+            # this_screen_border=bg1,
+            # other_current_screen_border=bg1,
+            # other_screen_border=bg1,
         ),
-    ),
-    # hdmi monitor
-    Screen(
-        wallpaper = desktop_wallpaper,
-        wallpaper_mode="fill",
-        top=bar.Bar(
-            [
-                widget.GroupBox(
-                    fontsize=21,
-                    # bar alignment
-                    margin_y=3,
-                    margin_x=3,
-                    padding_y=5,
-                    # separation between groups
-                    padding_x=5,
-                    spacing=3,
-                    center_aligned=True,
-                    borderwidth=0,
-                    active=fg0,
-                    inactive=bg4,
-                    rounded=True,
-                    use_mouse_wheel=False,
-                    disable_drag=True,
-                    mouse_callbacks={
-                        "Button1":lazy.spawn(),    # left click
-                        "Button2":lazy.spawn(),    # middle click
-                        "Button3":lazy.spawn(),    # right click
-                        "Button4":lazy.spawn(),    # scroll up
-                        "Button5":lazy.spawn(),    # scroll down
-                        "Button6":lazy.spawn(),    # scroll left
-                        "Button7":lazy.spawn(),    # scroll right
-                    },
-                    #highlight_color=yellow_hard,
-                    highlight_method="block",
-                    # this_current_screen_border='#b57614',
-                    # this_screen_border=bg1,
-                    # other_current_screen_border=bg1,
-                    # other_screen_border=bg1,
-                ),
-                widget.Spacer(
-                ),
-                # Spotify(
-                #     max_chars=40,
-                #     play_icon=' ',
-                #     pause_icon=' ',
-                #     format="{icon} {artist}:{track}",
-                # ),
-                widget.KeyboardLayout (
-                    fmt = "{} 󰌓 ",
-                ),
-                widget.Battery(
-                    format=' {percent:2.0%} {char} ',
-                    charge_char ='󰂄 ',
-                    discharge_char =' 󰂄 ',
-                    full_char ='󰂄  ',
-                    unknown_char ='󰂄',
-                    update_interval = 1,
-                    max_chars=60,
-                ),
-                widget.Spacer(
-                    length=10,
-                ),
-                widget.Volume(
-                    fmt='{} 󰕾 ',
-                ),
-                widget.Spacer(
-                    length=10,
-                ),
-                widget.Memory(
-                    fmt=' {}  ',
-                    measure_mem='G',
-                    format='{MemUsed:.0f}{mm}',
-                    padding=4,
-                ),
-                
-                widget.Spacer(
-                    length=10,
-                ),
-
-                widget.Clock(
-                    format=" %a, %b %d 󰃵   %H:%M 󱑂  ",
-                ),
-                widget.Spacer(
-                    length=10,
-                ),
-            ],
-            40, #bar size
+        widget.Spacer(
         ),
-    ),
-]
+        # Spotify(
+        #     max_chars=40,
+        #     play_icon=' ',
+        #     pause_icon=' ',
+        #     format="{icon} {artist}:{track}",
+        # ),
+        widget.KeyboardLayout (
+            fmt = "{} 󰌓 ",
+        ),
+        widget.Battery(
+            format=' {percent:2.0%} {char} ',
+            charge_char ='󰂄 ',
+            discharge_char =' 󰂄 ',
+            full_char ='󰂄  ',
+            unknown_char ='󰂄',
+            update_interval = 1,
+            max_chars=60,
+        ),
+        widget.Spacer(
+            length=10,
+        ),
+        widget.Volume(
+            fmt='{} 󰕾 ',
+        ),
+        widget.Spacer(
+            length=10,
+        ),
+        widget.Memory(
+            fmt=' {}  ',
+            measure_mem='G',
+            format='{MemUsed:.0f}{mm}',
+            padding=4,
+        ),
+
+        widget.Spacer(
+            length=10,
+        ),
+
+        widget.Clock(
+            format=" %a, %b %d 󰃵   %H:%M 󱑂  ",
+        ),
+        widget.Spacer(
+            length=10,
+        ),
+    ]
+    return widgets_list
+
+def init_widgets_screen1():
+    widgets_screen1 = init_widgets_list()
+    # Slicing removes unwanted widgets (systray) on Monitors 1,3
+    # del widgets_screen1[9:10]
+    return widgets_screen1
+
+def init_screens():
+    return [
+        # Primary screen
+        Screen(
+            top=bar.Bar(
+                wallpaper_mode="fill",
+                widgets=init_widgets_screen1(),
+                opacity=1.0,
+                size=40,
+                margin=[0, 0, 0, 0]
+            )
+        ),
+        # Secondary screen
+        Screen(
+            top=bar.Bar(
+                wallpaper_mode="fill",
+                widgets=init_widgets_screen1(),
+                opacity=1.0,
+                size=30,
+                margin=[0, 0, 0, 0]
+            )
+        )
+    ]
+
+
+if __name__ in ["config", "__main__"]:
+    screens = init_screens()
+    widgets_list = init_widgets_list()
+    widgets_screen1 = init_widgets_screen1()
+    # widgets_screen2 = init_widgets_screen2()
+
 
 
 # Drag floating layouts.

@@ -86,6 +86,7 @@
 (defun disable-company-mode ()
   (company-mode -1))
 (add-hook 'markdown-mode-hook 'disable-company-mode)
+(add-hook 'org-mode-hook 'disable-company-mode)
 (add-hook 'text-mode-hook 'disable-company-mode)
 
 (setq vterm-use-vterm-prompt-detection-method t)
@@ -130,23 +131,19 @@
           )))
 
 ;; configure tags
+;; all context based tags (not only location-specific) are marked with "@" prefix
 (setq org-tag-alist '(
                       (:startgroup . nil)
 
-                      (:startgrouptag)
-                      ("@home" . ?h)
-                      (:grouptags)
-                      ("pc" . ?p)
-                      ("chore" . ?c)
-                      (:endgrouptag)
+                      ("@pc" . ?p)
+                      ("@chore" . ?c)
+                      ("@errand" . ?s)
+                      ("@work" . ?w)
+                      ("@anywhere" . ?a)
 
-                      (:startgrouptag)
-                      ("@outside" . ?o)
-                      (:grouptags)
-                      ("@shop" . ?s)
-                      (:endgrouptag)
+                      ("clothes")
+                      ("supermarket")
 
-                      ("@work" . ?w) ;; locations
                       (:endgroup . nil)
                      ))
 
@@ -173,6 +170,19 @@
   (elfeed-org)
   (setq rmh-elfeed-org-files (list "~/documents/org/elfeed.org")))
 
+
+
+(require 'elfeed-tube)
+(elfeed-tube-setup)
+(define-key elfeed-show-mode-map (kbd "F") 'elfeed-tube-fetch)
+(define-key elfeed-show-mode-map [remap save-buffer] 'elfeed-tube-save)
+(define-key elfeed-search-mode-map (kbd "F") 'elfeed-tube-fetch)
+(define-key elfeed-search-mode-map [remap save-buffer] 'elfeed-tube-save)
+
+;; play video with mpv
+(define-key elfeed-show-mode-map (kbd "C-c C-d") 'elfeed-tube-mpv)
+
+
 ;; Automatically get the files in "~/Documents/org"
 ;; with fullpath
 ;;
@@ -180,7 +190,7 @@
 (setq org-agenda-start-on-weekday 1)
 
 (setq org-agenda-files '(
-                         "~/documents/org/projects.org"
+                         "~/documents/org/my_project.org"
                          "~/documents/org/agenda.org"
                          ))
 (map! :leader
@@ -235,6 +245,25 @@
 (setq org-gtd-done "DONE")
 (setq org-gtd-canceled "CANCELED")
 (setq org-reverse-note-order nil)
+
+
+;; Create hook to auto-refile when todo is changing state
+(add-hook 'org-after-todo-state-change-hook 'dk/refile-todo 'append)
+(defun dk/refile-todo()
+(if (equal org-state "DONE")
+	  (if (equal org-state "PROJECT")
+		  (dk/refile-to "~/documents/org/projects.org" "PROJECTS"))))
+
+(defun dk/refile-to (file headline)
+"Move current headline to specified location"
+(let ((pos (save-excursion
+			 (find-file file)
+			 (org-find-exact-headline-in-buffer headline))))
+  (org-refile nil nil (list headline file nil pos)))
+(switch-to-buffer (current-buffer))
+)
+
+
 
 
 ;;ORG MODE ENDS___________________________________________________________________________________________________________;;
