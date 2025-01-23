@@ -11,7 +11,7 @@ export DIRENV_LOG_FORMAT=""
 eval "$(starship init zsh)"
 
 # use neovim for opening man pages
-export MANPAGER='nvim +Man!'
+export MANPAGER='vim +Man!'
 # start ssh-agent
 # [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" 
 
@@ -19,6 +19,7 @@ export MANPAGER='nvim +Man!'
 HISTFILE="$HOME/.cache/zsh/history"
 HISTSIZE=100000
 SAVEHIST=100000
+HISTCONTROL="ignoredups"
 unsetopt extended_history 
 
 # enable case-insensitive path autocompletion
@@ -87,8 +88,25 @@ vterm_printf() {
     fi
 }
 
+# pomodoro
+function pomo() {
+    arg1=$1
+    shift
+    args="$*"
+
+    min=${arg1:?Example: pomo 15 Take a break}
+    sec=$((min * 60))
+    msg="${args:?Example: pomo 15 Take a break}"
+
+    while true; do
+        sleep "${sec:?}" && echo "${msg:?}" && notify-send -u critical -t 0 "${msg:?}"
+    done
+}
+
 vterm_prompt_end() {
     vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
 }
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
+
+export PATH=$PATH:/home/mgr/.spicetify

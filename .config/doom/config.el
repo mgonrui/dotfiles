@@ -88,6 +88,9 @@
 (add-hook 'markdown-mode-hook 'disable-company-mode)
 (add-hook 'org-mode-hook 'disable-company-mode)
 (add-hook 'text-mode-hook 'disable-company-mode)
+(add-hook 'c-mode-hook 'disable-company-mode)
+
+
 
 (setq vterm-use-vterm-prompt-detection-method t)
 
@@ -190,7 +193,7 @@
 (setq org-agenda-start-on-weekday 1)
 
 (setq org-agenda-files '(
-                         "~/documents/org/my_project.org"
+                         "~/documents/org/projects.org"
                          "~/documents/org/agenda.org"
                          ))
 (map! :leader

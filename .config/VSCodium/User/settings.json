@@ -1,6 +1,6 @@
 {
     "security.workspace.trust.untrustedFiles": "newWindow",
-    "clangd.path": "/home/mgr/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/18.1.3/clangd_18.1.3/bin/clangd",
+    "clangd.path": "/home/mgr/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/19.1.2/clangd_19.1.2/bin/clangd",
     "editor.fontFamily": "Agave Nerd Font",
     "editor.inlayHints.fontFamily": "3270 Nerd Font ",
     "editor.cursorBlinking": "solid",

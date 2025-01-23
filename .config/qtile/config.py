@@ -5,15 +5,17 @@ from libqtile.config import Click, Drag, Group, Match, Key, Screen, ScratchPad, 
 from libqtile.lazy import lazy
 from libqtile.log_utils import logger
 from xcffib.xproto import EventMask
+# from spotify import Spotify
 
 #_____variables________
 mod = "mod4"
 ctrl = "control"
 alt = "mod1"
 terminal = "kitty"
-wallpaper="~/media/images/desktop_wallpapers/gruvbox/nature/forest-hut.png"
+desktop_wallpaper="~/media/images/desktop_wallpapers/gruvbox/nature/forest-hut.png"
 # colors
 bone         = "#c5aa7f"
+
 bg0          = "#282828" 
 bg0_h        = "#1d2021" 
 bg0_s        = "#32302f" 
@@ -54,11 +56,15 @@ def autostart():
 keys = [
 
 #______programs hotkeys______
-Key([mod], "Return", lazy.group["scratchpad"].dropdown_toggle(terminal)),
+Key([mod], "Return", lazy.group["scratchpad"].dropdown_toggle("terminal")),
 Key([mod], "r",lazy.spawn("rofi -show drun")),
-Key([mod], "e",lazy.spawn("emacsclient -c")),
+# Key([mod], "e",lazy.spawn("emacsclient -c")),
 Key([mod], "y", lazy.group["scratchpad"].dropdown_toggle("clipgrab")),
 Key([mod], "o", lazy.group["scratchpad"].dropdown_toggle("fzfmenu")),
+# pomodoro qtile widget commands
+Key([mod], "p",lazy.spawn("qtile cmd-obj -o widget pomodoro -f toggle_active")),
+Key([mod], "b",lazy.spawn("qtile cmd-obj -o widget pomodoro -f toggle_break")),
+
 # print screen
 Key([], "Print", lazy.spawn("flameshot gui")),
 # control volume
@@ -72,12 +78,12 @@ Key([mod, "shift"], "equal", lazy.spawn("strawberry -f")),
 Key([mod, "shift"], "minus", lazy.spawn("strawberry -r")),
 Key([mod, "shift"], "space", lazy.spawn("strawberry -t")),
 # switch between monitors and laptop screen
-Key([mod, ctrl], "s", lazy.spawn("sh $HOME/.scripts/switch_screens.sh")),
+Key([mod, ctrl], "s", lazy.spawn("sh .scripts/switch_screens.sh")),
 # switch keyboard layout between us and spanish
-Key([mod, "shift"], "l", lazy.spawn("sh $HOME/.scripts/switch_keyboard_layout.sh")),
-Key([mod], "l", lazy.spawn("sh $HOME/.scripts/fzfmenu/emacsrestart.sh")),
+Key([mod, "shift"], "l", lazy.spawn("sh .scripts/switch_keyboard_layout.sh")),
+Key([mod, ctrl], "e", lazy.spawn("sh .scripts/fzfmenu/emacsrestart.sh")),
 # reload qtile config
-Key([mod, ctrl], "r", lazy.reload_config(), lazy.spawn("sh $HOME/.scripts/keyboard_layout.sh")),
+Key([mod, ctrl], "r", lazy.reload_config()),
 # lock screen 
 Key([mod, ctrl], "l", lazy.spawn("xscreensaver-command -lock")),
 # quit qtile
@@ -116,8 +122,8 @@ groups = [
                  opacity=0.3,
                  on_focus_lost_hide=False,
                  warp_pointer=True),
-        DropDown("kitty",
-                 "kitty",
+        DropDown("terminal",
+                 terminal,
                  x=0.045,
                  y=0.04,
                  width=0.906,
@@ -175,7 +181,7 @@ groups = [
     Group("9", label=" 󰟀  ",  layout=default_layout, matches=[
         Match(wm_class="virt-manager"),
         Match(wm_class="chromium-browser"),
-        Match(wm_class="virtualbox")]),
+        Match(wm_class="VirtualBox Manager")]),
     # misc
     Group("0", label=" 󰛄  ", layout=default_layout, matches=[
         Match(wm_class=0)]),
@@ -292,13 +298,33 @@ def init_widgets_list():
         widget.Spacer(
         ),
         # Spotify(
-        #     max_chars=40,
         #     play_icon=' ',
         #     pause_icon=' ',
-        #     format="{icon} {artist}:{track}",
+        #     format="{icon} {artist}: {track}",
         # ),
+        # widget.Spacer(
+        #     length=20,
+        # ),
+        widget.Pomodoro(
+            color_active = bone,
+            color_break = bone,
+            color_inactive = bone,
+            fmt = "{} ",
+            length_long_break = 15,
+            length_pomodori = 120,
+            lenght_short_break = 5,
+            notification_on = False,
+            num_pomodori = 4,
+            prefix_break = 'B ',
+            prefix_inactive = ' ',
+            prefix_active =  '',
+            prefix_paused = 'PAUSE',
+        ),
         widget.KeyboardLayout (
             fmt = "{} 󰌓 ",
+        ),
+        widget.Spacer(
+            length=5,
         ),
         widget.Battery(
             format=' {percent:2.0%} {char} ',
@@ -310,13 +336,14 @@ def init_widgets_list():
             max_chars=60,
         ),
         widget.Spacer(
-            length=10,
+            length=5,
         ),
         widget.Volume(
             fmt='{} 󰕾 ',
+            foreground=bone, # BUG: it wont take foreground color from widget_defaults
         ),
         widget.Spacer(
-            length=10,
+            length=5,
         ),
         widget.Memory(
             fmt=' {}  ',
@@ -326,31 +353,32 @@ def init_widgets_list():
         ),
 
         widget.Spacer(
-            length=10,
+            length=5,
         ),
 
         widget.Clock(
-            format=" %a, %b %d 󰃵   %H:%M 󱑂  ",
+            format=" %a, %b %d 󰃵   %H:%M 󱑂 ",
         ),
         widget.Spacer(
-            length=10,
+            length=5,
         ),
     ]
     return widgets_list
 
-def init_widgets_screen1():
-    widgets_screen1 = init_widgets_list()
+def init_widgets_screen():
+    widgets_screen = init_widgets_list()
     # Slicing removes unwanted widgets (systray) on Monitors 1,3
-    # del widgets_screen1[9:10]
-    return widgets_screen1
+    # del widgets_screen[9:10]
+    return widgets_screen
 
 def init_screens():
     return [
         # Primary screen
         Screen(
+            wallpaper=desktop_wallpaper,
+            wallpaper_mode="fill",
             top=bar.Bar(
-                wallpaper_mode="fill",
-                widgets=init_widgets_screen1(),
+                widgets=init_widgets_screen(),
                 opacity=1.0,
                 size=40,
                 margin=[0, 0, 0, 0]
@@ -358,9 +386,10 @@ def init_screens():
         ),
         # Secondary screen
         Screen(
+            wallpaper=desktop_wallpaper,
+            wallpaper_mode="fill",
             top=bar.Bar(
-                wallpaper_mode="fill",
-                widgets=init_widgets_screen1(),
+                widgets=init_widgets_screen(),
                 opacity=1.0,
                 size=30,
                 margin=[0, 0, 0, 0]
@@ -372,7 +401,7 @@ def init_screens():
 if __name__ in ["config", "__main__"]:
     screens = init_screens()
     widgets_list = init_widgets_list()
-    widgets_screen1 = init_widgets_screen1()
+    widgets_screen = init_widgets_screen()
     # widgets_screen2 = init_widgets_screen2()
 
 
