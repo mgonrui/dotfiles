@@ -90,6 +90,13 @@
 (add-hook 'text-mode-hook 'disable-company-mode)
 (add-hook 'c-mode-hook 'disable-company-mode)
 
+(setq fancy-splash-image (concat doom-user-dir "/images/gnu_cropped.png"))
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
+(add-hook! '+doom-dashboard-functions :append
+  (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Welcome back, lisp sorcerer!\n\n\n\n\n\n\n\n\n\n\n\n\n")))
+(assoc-delete-all "Open project" +doom-dashboard-menu-sections)
 
 
 (setq vterm-use-vterm-prompt-detection-method t)
