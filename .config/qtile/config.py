@@ -139,51 +139,50 @@ groups = [
                  opacity=1,
                  on_focus_lost_hide=False,),],),
     # ide
-    Group("1", label="   ", layout=default_layout, matches=[
+    Group("0", label="   ", layout=default_layout, matches=[
               Match(wm_class="emacs"),
               Match(wm_class="darktable")]),
     # browser
-    Group("2",label=" 󰖟  ", layout=default_layout, matches=[
+    Group("1",label=" 󰖟  ", layout=default_layout, matches=[
         Match(wm_class="brave-browser"),
         Match(wm_class="firefox-esr")]),
     # email & chat
-    Group("3", label="   ", layout=default_layout, matches=[
+    Group("2", label="   ", layout=default_layout, matches=[
         Match(wm_class="tutanota-desktop"),
         Match(wm_class="thunderbird"),
         Match(wm_class="whatsapp-for-linux"),
         Match(wm_class="hexchat"),
         Match(wm_class="signal"),
         Match(wm_class="net.sourceforge.liferea")]),
-    Group("4", label="   ", layout=default_layout, matches=[
-        Match(wm_class="freetube"),
-        Match(wm_class="vlc"),
-        Match(wm_class="mpv")]),
     # document viewer
-    Group("5", label=" 󰈙  ", layout=default_layout, matches=[
+    Group("3", label=" 󰈙  ", layout=default_layout, matches=[
         Match(wm_class= "calibre"),
         Match(wm_class="okular"),
         Match(wm_class="Zathura")]),
-    # gui file manager
-    Group("6", label="   ", layout=default_layout, matches=[
+    # gui file manager and video
+    Group("4", label="   ", layout=default_layout, matches=[
         Match(wm_class= "nemo"),
-        Match(wm_class= "dolphin")]),
+        Match(wm_class= "dolphin"),
+        Match(wm_class="freetube"),
+        Match(wm_class="vlc"),
+        Match(wm_class="mpv")]),
     # downloads
-    Group("7", label="   ", layout=default_layout, matches=[
+    Group("6", label="   ", layout=default_layout, matches=[
         Match(wm_class="qbittorrent"),
         Match(wm_class=".nicotine-wrapped"),
         Match(wm_class="amule" )]),
     # music
-    Group("8",label="   ", layout=default_layout, matches=[
+    Group("7",label="   ", layout=default_layout, matches=[
         Match(wm_class="spotify"),
         Match(wm_class="strawberry"),
         Match(wm_class="easyeffects")]),
     # virtual machines
-    Group("9", label=" 󰟀  ",  layout=default_layout, matches=[
+    Group("8", label=" 󰟀  ",  layout=default_layout, matches=[
         Match(wm_class="virt-manager"),
         Match(wm_class="chromium-browser"),
         Match(wm_class="VirtualBox Manager")]),
     # misc
-    Group("0", label=" 󰛄  ", layout=default_layout, matches=[
+    Group("9", label=" 󰛄  ", layout=default_layout, matches=[
         Match(wm_class=0)]),
 ]
 
