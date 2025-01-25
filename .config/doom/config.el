@@ -38,6 +38,23 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-gruvbox)
 
+;; home screen configuration
+(setq fancy-splash-image (concat doom-user-dir "/images/gnu_cropped.png"))
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
+(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
+(add-hook! '+doom-dashboard-functions :append
+  (insert  (+doom-dashboard--center +doom-dashboard--width "Welcome back, lisp sorcerer!" ) "\n\n\n\n\n\n\n\n\n\n\n\n\n"))
+(assoc-delete-all "Open project" +doom-dashboard-menu-sections)
+
+;; System locale to use for formatting time values.
+(setq system-time-locale "C")         ; Make sure that the weekdays in the time stamps of
+                                      ; your Org mode files and in the agenda appear in English.
+
+;; set calendar to start weeks on monday
+(setq calendar-week-start-day 1)
+
+
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -90,24 +107,19 @@
 (add-hook 'text-mode-hook 'disable-company-mode)
 (add-hook 'c-mode-hook 'disable-company-mode)
 
-(setq fancy-splash-image (concat doom-user-dir "/images/gnu_cropped.png"))
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
-(remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
-(add-hook! '+doom-dashboard-functions :append
-  (insert "\n" (+doom-dashboard--center +doom-dashboard--width "Welcome back, lisp sorcerer!\n\n\n\n\n\n\n\n\n\n\n\n\n")))
-(assoc-delete-all "Open project" +doom-dashboard-menu-sections)
-
 
 (setq vterm-use-vterm-prompt-detection-method t)
 
 
-;; System locale to use for formatting time values.
-(setq system-time-locale "C")         ; Make sure that the weekdays in the time stamps of
-                                      ; your Org mode files and in the agenda appear in English.
+;; compile c source code and run it
+(defun execute-c ()
+  (interactive)
+  (defvar compile-command)
+  (setq compile-command(concat "make  && ./a.out | cat -e" ))
+  (compile compile-command))
+(map! :leader
+      "r r" #'execute-c)
 
-;; set calendar to start weeks on monday
-(setq calendar-week-start-day 1)
 
 ;;START ORG MODE ___________________________________________________________________________________________________________;;
 
@@ -273,17 +285,12 @@
 (switch-to-buffer (current-buffer))
 )
 
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")))
 
 
 
 ;;ORG MODE ENDS___________________________________________________________________________________________________________;;
-
-;; compile c source code and run it
-(defun execute-c ()
-  (interactive)
-  (defvar compile-command)
-  (setq compile-command(concat "make  && ./a.out | cat -e" ))
-  (compile compile-command))
-(map! :leader
-      "r r" #'execute-c)
-
