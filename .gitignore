@@ -19,3 +19,6 @@
 !.mozilla/firefox/2n38hpgh.privatebrowsingv3/chrome
 
 .config/darktable/*.db*
+
+.config/zsh/.zcompdump
+.config/zsh/.zprofile

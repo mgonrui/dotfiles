@@ -138,13 +138,15 @@ groups = [
                  height=0.5,
                  opacity=1,
                  on_focus_lost_hide=False,),],),
-    # ide
+    # main work environment
     Group("0", label="   ", layout=default_layout, matches=[
               Match(wm_class="emacs"),
+              Match(wm_class="vscodium"),
               Match(wm_class="darktable")]),
     # browser
     Group("1",label=" 󰖟  ", layout=default_layout, matches=[
         Match(wm_class="brave-browser"),
+        Match(wm_class="firefox"),
         Match(wm_class="firefox-esr")]),
     # email & chat
     Group("2", label="   ", layout=default_layout, matches=[
@@ -162,6 +164,7 @@ groups = [
     # gui file manager and video
     Group("4", label="   ", layout=default_layout, matches=[
         Match(wm_class= "nemo"),
+        Match(wm_class= "thunar"),
         Match(wm_class= "dolphin"),
         Match(wm_class="freetube"),
         Match(wm_class="vlc"),
