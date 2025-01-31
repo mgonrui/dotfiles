@@ -2,12 +2,12 @@ font:
   normal:
     family: Agave Nerd Font
     style: Large 
-  size: 18 
+  size: 18
 window:
   padding:
     x: 3
     y: 3
-
+    opacity: 100
 
 schemes:
   gruvbox_material_hard_dark: &gruvbox_material_hard_dark

@@ -53,6 +53,10 @@
 
 ;; set calendar to start weeks on monday
 (setq calendar-week-start-day 1)
+(setq electric-pair-mode 1)
+ 
+(setq c-default-style "linux"
+      c-basic-offset 4)
 
 
 
@@ -111,6 +115,9 @@
 (setq vterm-use-vterm-prompt-detection-method t)
 
 
+;; prioritize snippet autocompletion over lsp
+(setq +lsp-company-backends '(company-capf :with company-yasnippet))
+
 ;; compile c source code and run it
 (defun execute-c ()
   (interactive)
@@ -120,6 +127,31 @@
 (map! :leader
       "r r" #'execute-c)
 
+(map! :leader
+      "s h" (lambda ()
+              (interactive)
+              (split-window-horizontally)
+              (evil-window-right 1)))
+
+(map! :leader
+      "s v" (lambda ()
+              (interactive)
+              (split-window-vertically)
+              (evil-window-down 1)))
+
+
+
+(defun generate-scratch-buffer ()
+    "Create and switch to a temporary scratch buffer with a random
+       name."
+    (interactive)
+    (switch-to-buffer (make-temp-name "scratch")))
+
+;; show lsp definition handlers
+(setq lsp-eldoc-render-all nil)
+(setq lsp-ui-doc-enable nil)
+(setq lsp-ui-sideline-enable nil)
+(setq lsp-completion-provider 0.2)
 
 ;;START ORG MODE ___________________________________________________________________________________________________________;;
 

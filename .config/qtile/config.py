@@ -119,7 +119,7 @@ groups = [
                  y=0.04,
                  width=0.906,
                  height=0.904,
-                 opacity=0.3,
+                 opacity=1,
                  on_focus_lost_hide=False,
                  warp_pointer=True),
         DropDown("terminal",
