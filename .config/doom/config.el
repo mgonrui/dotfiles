@@ -127,12 +127,14 @@
 (map! :leader
       "r r" #'execute-c)
 
+;; split window horizontally and move cursor to the right
 (map! :leader
       "s h" (lambda ()
               (interactive)
               (split-window-horizontally)
               (evil-window-right 1)))
 
+;; split window vertically and move cursor down
 (map! :leader
       "s v" (lambda ()
               (interactive)
