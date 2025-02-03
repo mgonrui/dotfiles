@@ -38,6 +38,8 @@
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-gruvbox)
 
+
+
 ;; home screen configuration
 (setq fancy-splash-image (concat doom-user-dir "/images/gnu_cropped.png"))
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
@@ -58,18 +60,15 @@
 (setq c-default-style "linux"
       c-basic-offset 4)
 
+;; display lines with relative numbers
+(after! doom-ui
+  (setq display-line-numbers-type 'relative))
 
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 ;; set private config path
 (setq doom-user-dir "/home/mgr/.dotfiles/.config/doom/")
-;; set relative number lines
-;;(setq display-line-numbers-type 'relative)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
@@ -114,7 +113,6 @@
 
 (setq vterm-use-vterm-prompt-detection-method t)
 
-
 ;; prioritize snippet autocompletion over lsp
 (setq +lsp-company-backends '(company-capf :with company-yasnippet))
 
@@ -127,14 +125,18 @@
 (map! :leader
       "r r" #'execute-c)
 
+;; column maker
+(add-to-list 'load-path "~/.config/doom/libs/column-marker")
+(load-file "~/.config/doom/libs/column-marker/column-marker.el")
+(add-hook 'c-mode-hook (lambda () (interactive) (column-marker-1 80)))
+
+
 ;; split window horizontally and move cursor to the right
 (map! :leader
       "s h" (lambda ()
               (interactive)
               (split-window-horizontally)
               (evil-window-right 1)))
-
-;; split window vertically and move cursor down
 (map! :leader
       "s v" (lambda ()
               (interactive)
@@ -142,6 +144,31 @@
               (evil-window-down 1)))
 
 
+;; golden ratio resizing
+(require 'golden-ratio)
+(golden-ratio-mode 1)
+;; fix to work with evil mode
+(setq golden-ratio-extra-commands
+(append golden-ratio-extra-commands
+'(evil-window-left
+evil-window-right
+evil-window-up
+evil-window-down
+buf-move-left
+buf-move-right
+buf-move-up
+buf-move-down
+window-number-select
+select-window
+select-window-1
+select-window-2
+select-window-3
+select-window-4
+select-window-5
+select-window-6
+select-window-7
+select-window-8
+select-window-9)))
 
 (defun generate-scratch-buffer ()
     "Create and switch to a temporary scratch buffer with a random
@@ -252,7 +279,7 @@
 (map! :leader
       "o a" #'org-agenda)
 ;; set org capture templates
-(after! org ;; if loaded before org it breaks, quick dirty fix
+(after! org
 (setq org-capture-templates
       `(("i" "Inbox" entry  (file+headline "gtd.org" "MY INBOX")
          "**** INBOX %?"))))
@@ -328,3 +355,12 @@
 
 
 ;;ORG MODE ENDS___________________________________________________________________________________________________________;;
+
+;; 42 insert header plugin
+(add-to-list 'load-path "~/.config/doom/libs")
+(add-to-list 'load-path "~/.config/doom/libs/42header_emacs")
+(load-file "~/.config/doom/libs/42header_emacs/comments.el")
+(load-file "~/.config/doom/libs/42header_emacs/header.el")
+(load-file "~/.config/doom/libs/42header_emacs/init.el")
+(load-file "~/.config/doom/libs/42header_emacs/list.el")
+(load-file "~/.config/doom/libs/42header_emacs/string.el")

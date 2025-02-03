@@ -3,7 +3,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 # Created by `pipx` on 2024-10-20 16:46:56
 export PATH="$PATH:/home/mgr/.local/bin"
-
+export HEADER42_LOGIN="mariogo2"
+export HEADER42_MAIL="mariogo2@student.42malaga.com"
 # hook direnv to zsh
 eval "$(direnv hook zsh)"
 export DIRENV_LOG_FORMAT=""

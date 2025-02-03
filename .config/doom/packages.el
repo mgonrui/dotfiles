@@ -41,7 +41,7 @@
 ;; (package! builtin-package :pin "1a2b3c4d5e")
 
 
-;; Doom's packages are pinned to a specific commit and updated from release to
+;    Updated: 2025/02/02 21:18:45 by mariogo2         ###   ########.fr        ;
 ;; release. The `unpin!' macro allows you to unpin single packages...
 ;; (unpin! pinned-package)
 ;; ...or multiple packages
@@ -58,3 +58,5 @@
 (package! org-edna)
 (package! elfeed-tube)
 (package! elfeed-tube-mpv)
+(package! golden-ratio)
+(package! gptel)
