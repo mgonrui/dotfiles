@@ -12,7 +12,7 @@ export DIRENV_LOG_FORMAT=""
 eval "$(starship init zsh)"
 
 # use neovim for opening man pages
-export MANPAGER='vim +Man!'
+export MANPAGER='nvim +Man!'
 # start ssh-agent
 # [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)" 
 

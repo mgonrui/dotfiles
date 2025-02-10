@@ -1,6 +1,6 @@
 * {
     border: none;
-    border-radius: 0;
+    border-radius: 12px;
     font-family: "Agave Nerd Font";
     font-size: medium;
     min-height: 0;
@@ -9,6 +9,9 @@ window#waybar {
     background: #202020;
     color: #202020;
 
+}
+window#waybar.top label.module {
+    box-shadow: inset 0 -3px;
 }
 /* workspaces that dont appear on any monitor but are not empty */
 #workspaces button {
