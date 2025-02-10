@@ -41,7 +41,7 @@
 ;; (package! builtin-package :pin "1a2b3c4d5e")
 
 
-;    Updated: 2025/02/02 21:18:45 by mariogo2         ###   ########.fr        ;
+;    Updated: 2025/02/09 19:44:45 by mariogo2         ###   ########.fr        ;
 ;; release. The `unpin!' macro allows you to unpin single packages...
 ;; (unpin! pinned-package)
 ;; ...or multiple packages
@@ -60,3 +60,4 @@
 (package! elfeed-tube-mpv)
 (package! golden-ratio)
 (package! gptel)
+(package! rainbow-mode)

@@ -8,15 +8,22 @@ from xcffib.xproto import EventMask
 # from spotify import Spotify
 
 #_____variables________
+# keys
 mod = "mod4"
 ctrl = "control"
+shft = "shift"
 alt = "mod1"
+spc = "space"
+tb = "Tab"
+prnt = "print"
+rtrn = "Return"
+# terminal
 terminal = "kitty"
+# wallpaper
 desktop_wallpaper="~/media/images/desktop_wallpapers/gruvbox/nature/forest-hut.png"
 # colors
 bone         = "#c5aa7f"
-
-bg0          = "#282828" 
+bg0          = "#282828"
 bg0_h        = "#1d2021" 
 bg0_s        = "#32302f" 
 bg1          = "#3c3836" 
@@ -54,51 +61,56 @@ def autostart():
     subprocess.call([home])
 
 keys = [
+    #______programs hotkeys______
+    # open terminal
+    Key([mod], rtrn, lazy.group["scratchpad"].dropdown_toggle("terminal")),
+    Key([mod], "r",lazy.spawn("rofi -show drun")),
+    Key([mod], "y", lazy.group["scratchpad"].dropdown_toggle("clipgrab")),
+    Key([mod], "o", lazy.group["scratchpad"].dropdown_toggle("fzfmenu")),
+    # print screen
+    Key([], prnt, lazy.spawn("flameshot gui")),
+    # control volume
+    Key([mod], "equal", lazy.spawn("amixer set Master 5%+")),
+    Key([mod], "minus", lazy.spawn("amixer set Master 5%-")),
+    # control screen brightness
+    Key([mod, ctrl], "equal", lazy.spawn("light -A 5")),
+    Key([mod, ctrl], "minus", lazy.spawn("light -U 5")),
+    # control music player
+    Key([mod, shft], "equal", lazy.spawn("strawberry -f")),
+    Key([mod, shft], "minus", lazy.spawn("strawberry -r")),
+    Key([mod, shft], spc, lazy.spawn("strawberry -t")),
+    # switch between monitors and laptop screen
+    Key([mod, ctrl], "s", lazy.spawn("sh .scripts/switch_screens.sh")),
+    # switch keyboard layout between us and spanish
+    Key([mod, ctrl, shft], "l", lazy.spawn("sh .scripts/switch_keyboard_layout.sh")),
+    # restart emacs
+    Key([mod, ctrl], "e", lazy.spawn("sh .scripts/fzfmenu/emacsrestart.sh")),
+    # reload qtile config
+    Key([mod, ctrl], "r", lazy.reload_config()),
+    # lock screen
+    # Key([mod, ctrl], "l", lazy.spawn("xscreensaver-command -lock")),
+    # quit qtile
+    Key([mod, ctrl], "q", lazy.shutdown()),
 
-#______programs hotkeys______
-Key([mod], "Return", lazy.group["scratchpad"].dropdown_toggle("terminal")),
-Key([mod], "r",lazy.spawn("rofi -show drun")),
-# Key([mod], "e",lazy.spawn("emacsclient -c")),
-Key([mod], "y", lazy.group["scratchpad"].dropdown_toggle("clipgrab")),
-Key([mod], "o", lazy.group["scratchpad"].dropdown_toggle("fzfmenu")),
-# pomodoro qtile widget commands
-Key([mod], "p",lazy.spawn("qtile cmd-obj -o widget pomodoro -f toggle_active")),
-Key([mod], "b",lazy.spawn("qtile cmd-obj -o widget pomodoro -f toggle_break")),
 
-# print screen
-Key([], "Print", lazy.spawn("flameshot gui")),
-# control volume
-Key([mod], "equal", lazy.spawn("amixer set Master 5%+")),
-Key([mod], "minus", lazy.spawn("amixer set Master 5%-")),
-# control screen brightness
-Key([mod, ctrl], "equal", lazy.spawn("light -A 5")),
-Key([mod, ctrl], "minus", lazy.spawn("light -U 5")),
-# control music player
-Key([mod, "shift"], "equal", lazy.spawn("strawberry -f")),
-Key([mod, "shift"], "minus", lazy.spawn("strawberry -r")),
-Key([mod, "shift"], "space", lazy.spawn("strawberry -t")),
-# switch between monitors and laptop screen
-Key([mod, ctrl], "s", lazy.spawn("sh .scripts/switch_screens.sh")),
-# switch keyboard layout between us and spanish
-Key([mod, "shift"], "l", lazy.spawn("sh .scripts/switch_keyboard_layout.sh")),
-Key([mod, ctrl], "e", lazy.spawn("sh .scripts/fzfmenu/emacsrestart.sh")),
-# reload qtile config
-Key([mod, ctrl], "r", lazy.reload_config()),
-# lock screen 
-Key([mod, ctrl], "l", lazy.spawn("xscreensaver-command -lock")),
-# quit qtile
-Key([mod, ctrl], "q", lazy.shutdown()),
-
-# ______WINDOW_MANAGEMENT_______
-
-# kill focused window
-Key([mod], "d", lazy.window.kill()),
-# move focus to next screen
-# Key([mod], "k", lazy.layout.next()),
-# switch between monitors
-Key([mod], "space", lazy.next_screen()),
-# switch between layouts
-Key([mod], "Tab", lazy.next_layout()),
+    # ______window management_______
+    # move cursor
+    Key([mod], "j", lazy.layout.down()),
+    Key([mod], "k", lazy.layout.up()),
+    Key([mod], "h", lazy.layout.left()),
+    Key([mod], "l", lazy.layout.right()),
+    # move windows
+    Key([mod, shft], "j", lazy.layout.shuffle_down()),
+    Key([mod, shft], "k", lazy.layout.shuffle_up()),
+    Key([mod, shft], "h", lazy.layout.shuffle_left()),
+    Key([mod, shft], "l", lazy.layout.shuffle_right()),
+    # switch between monitors
+    Key([mod], spc, lazy.next_screen()),
+    # kill focused window
+    Key([mod], "d", lazy.window.kill()),
+    # switch between layouts
+    Key([mod], tb, lazy.next_layout()),
+Key([mod, ctrl], "j", lazy.layout.grow()),
 ]
 
 # floating_layout = layout.Floating(**layout_theme,
@@ -139,53 +151,54 @@ groups = [
                  opacity=1,
                  on_focus_lost_hide=False,),],),
     # main work environment
-    Group("0", label="   ", layout=default_layout, matches=[
+    Group("0", label=" 0 ", layout=default_layout, matches=[
               Match(wm_class="emacs"),
               Match(wm_class="vscodium"),
               Match(wm_class="darktable")]),
     # browser
-    Group("1",label=" 󰖟  ", layout=default_layout, matches=[
+    Group("1",label=" 1 ", layout=default_layout, matches=[
         Match(wm_class="brave-browser"),
         Match(wm_class="firefox"),
         Match(wm_class="firefox-esr")]),
     # email & chat
-    Group("2", label="   ", layout=default_layout, matches=[
-        Match(wm_class="tutanota-desktop"),
-        Match(wm_class="thunderbird"),
+    Group("2", label=" 2 ", layout=default_layout, matches=[
         Match(wm_class="whatsapp-for-linux"),
         Match(wm_class="hexchat"),
         Match(wm_class="signal"),
         Match(wm_class="net.sourceforge.liferea")]),
     # document viewer
-    Group("3", label=" 󰈙  ", layout=default_layout, matches=[
+    Group("3", label=" 3 ", layout=default_layout, matches=[
         Match(wm_class= "calibre"),
         Match(wm_class="okular"),
         Match(wm_class="Zathura")]),
     # gui file manager and video
-    Group("4", label="   ", layout=default_layout, matches=[
+    Group("4", label=" 4 ", layout=default_layout, matches=[
         Match(wm_class= "nemo"),
         Match(wm_class= "thunar"),
         Match(wm_class= "dolphin"),
         Match(wm_class="freetube"),
         Match(wm_class="vlc"),
         Match(wm_class="mpv")]),
+    # mail
+    Group("5", label=" 5 ", layout=default_layout, matches=[
+        Match(wm_class="tutanota-desktop"),
+        Match(wm_class="thunderbird")]),
     # downloads
-    Group("6", label="   ", layout=default_layout, matches=[
+    Group("6", label=" 6 ", layout=default_layout, matches=[
         Match(wm_class="qbittorrent"),
         Match(wm_class=".nicotine-wrapped"),
         Match(wm_class="amule" )]),
     # music
-    Group("7",label="   ", layout=default_layout, matches=[
+    Group("7",label=" 7 ", layout=default_layout, matches=[
         Match(wm_class="spotify"),
         Match(wm_class="strawberry"),
         Match(wm_class="easyeffects")]),
     # virtual machines
-    Group("8", label=" 󰟀  ",  layout=default_layout, matches=[
+    Group("8", label=" 8 ",  layout=default_layout, matches=[
         Match(wm_class="virt-manager"),
-        Match(wm_class="chromium-browser"),
         Match(wm_class="VirtualBox Manager")]),
     # misc
-    Group("9", label=" 󰛄  ", layout=default_layout, matches=[
+    Group("9", label=" 9 ", layout=default_layout, matches=[
         Match(wm_class=0)]),
 ]
 
@@ -219,7 +232,7 @@ layouts = [
     layout.Max(**layout_theme),
     layout.VerticalTile(**layout_theme),
     # interesting layouts
-    #layout.MonadTall(**layout_theme),
+    layout.MonadTall(**layout_theme),
 
     # not so interesting layouts
     # layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),

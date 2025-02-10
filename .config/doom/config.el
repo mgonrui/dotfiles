@@ -1,7 +1,12 @@
-;; KEY MAPPING STARTS
-;; make and run c programs
+;; KEY MAPPING
+(map! :leader
+      "w w" #'ace-window)
 (map! :leader
       "r r" #'execute-c)
+(map! :leader
+      "h l" #'evil-lookup)
+(map! :leader
+      "w o" #'toggle-golden-ratio)
 ;; split window horizontally and move cursor to the right
 (map! :leader
       "s h" (lambda ()
@@ -17,10 +22,10 @@
 ;; refresh magit
 (map! :leader
       "r f" (lambda () (interactive) (magit-refresh)))
-;; KEY MAPPING ENDS
+(define-prefix-command 'my-window-map)
 
-;; USER INTERFACE STARTS
-;; set fonts
+
+;; USER INTERFACE
 ;; See 'C-h v doom-font' for documentation and more examples of what they accept
 (setq doom-font (font-spec :family "Agave Nerd Font" :size 20 :weight 'semi-light);; the primary font to use
       doom-variable-pitch-font (font-spec :family "Agave Nerd Font" :size 15) ;; a non-monospace font (where applicable)
@@ -29,13 +34,14 @@
       doom-symbol-font (font-spec :family "Agave Nerd Font" :size 24)) ;; for symbols
 ;; set default theme
 (setq doom-theme 'doom-gruvbox)
+;; Must be used *after* the theme is loaded
 ;; home screen configuration
-(setq fancy-splash-image (concat doom-user-dir "/images/gnu_cropped.png"))
+(setq fancy-splash-image (concat doom-user-dir "/images/gruvbox_emacs_logo_cropped.png"))
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-shortmenu)
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-footer)
 (remove-hook '+doom-dashboard-functions #'doom-dashboard-widget-loaded)
-(add-hook! '+doom-dashboard-functions :append
-  (insert  (+doom-dashboard--center +doom-dashboard--width "Welcome back, lisp sorcerer!" ) "\n\n\n\n\n\n\n\n\n\n\n\n\n"))
+;; (add-hook! '+doom-dashboard-functions :append
+;;   (insert  (+doom-dashboard--center +doom-dashboard--width "Welcome back, lisp sorcerer!" )))
 (assoc-delete-all "Open project" +doom-dashboard-menu-sections)
 ;; display lines with relative numbers
 (after! doom-ui
@@ -43,10 +49,18 @@
 ;; golden ratio resizing
 (require 'golden-ratio)
 (golden-ratio-mode 1)
-;; fix golden ratio to work with evil mode
+;; function to toggle golden ratio
+(defun toggle-golden-ratio()
+  (interactive)
+  (if (= golden-ratio-adjust-factor 0)
+      (golden-ratio-adjust 1)
+    (golden-ratio-adjust 0)))
+;; hook golden ratio to movement commands
 (setq golden-ratio-extra-commands
 (append golden-ratio-extra-commands
-'(evil-window-left
+'(
+ace-window
+evil-window-left
 evil-window-right
 evil-window-up
 evil-window-down
@@ -72,36 +86,27 @@ select-window-9)))
 (add-hook 'org-mode-hook 'disable-company-mode)
 (add-hook 'text-mode-hook 'disable-company-mode)
 (add-hook 'c-mode-hook 'disable-company-mode)
-;; USER INTERFACE ENDS
+;; disable quit emacs prompt
+(setq confirm-kill-emacs nil)
 
-;; LSP STARTS
+
+;; LSP
 ;; prioritize snippet autocompletion over lsp completion
 (setq +lsp-company-backends '(company-capf :with company-yasnippet))
-;; show lsp definition handlers
-(setq lsp-eldoc-render-all nil)
-(setq lsp-ui-doc-enable nil)
-(setq lsp-ui-sideline-enable nil)
 (setq lsp-completion-provider 0.2)
-;; LSP ENDS
 
 
-;; SYSTEM SETTINGS STARTS
+;; SYSTEM SETTINGS
 ;; set doom dir
-(setq doom-user-dir "/home/mgr/.dotfiles/.config/doom/")
+;; (setq doom-user-dir "~/.dotfiles/.config/doom/")
 ;; load org configuration
 (load! "~/.config/doom/org.el")
 ;; load libraries folder
 (add-load-path! "libs")
-;; System locale to use for formatting time values.
-(setq system-time-locale "C")         ; Make sure that the weekdays in the time stamps of
-                                      ; your Org mode files and in the agenda appear in English.
-
-;; set calendar to start weeks on monday
-(setq calendar-week-start-day 1)
 (setq electric-pair-mode 1)
-;; SYSTEM SETTINGS ENDS
 
-;; C PROGRAMMING STARTS
+
+;; C PROGRAMMING ENVIRONMENT
 ;; set c default formatting style
 (setq c-default-style "linux"
       c-basic-offset 4)
@@ -120,5 +125,5 @@ select-window-9)))
 (load! "libs/42header_emacs/comments.el")
 (load! "libs/42header_emacs/header.el")
 (load! "libs/42header_emacs/init.el")
-(load! "libs/42header_emacs/list.el")
+;; (load! "libs/42header_emacs/list.el")
 (load! "libs/42header_emacs/string.el")

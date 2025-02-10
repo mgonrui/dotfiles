@@ -1,0 +1,64 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Agave Nerd Font";
+    font-size: medium;
+    min-height: 0;
+}
+window#waybar {
+    background: #202020;
+    color: #202020;
+
+}
+/* workspaces that dont appear on any monitor but are not empty */
+#workspaces button {
+    padding: 0 10px;
+    background: #202020;
+    color: #FFEFCB;
+    box-shadow: none;
+
+}
+#workspaces button.empty {
+    padding: 0 10px;
+    background: #202020;
+    box-shadow: none;
+
+}
+#workspaces button:hover {
+    box-shadow: 0px 0px 0px;
+    text-shadow: none;
+}
+#workspaces button.visible{
+    background: #3c3836;
+}
+
+#workspaces button.active{
+    background: #c5aa7f;
+    color: #202020;
+}
+
+
+
+#battery, #backlight, #pulseaudio, #memory, #cpu, #temperature, #clock {
+    padding: 0 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #c5aa7f;
+    font-family: "Agave Nerd Font";
+    font-size: medium;
+}
+#memory {
+    color: #c5aa7f
+}
+#pulseaudio {
+    color: #c5aa7f
+}
+#backlight {
+    color: #c5aa7f
+}
+#battery{
+    color: #c5aa7f
+}
+#clock {
+    color: #c5aa7f
+}

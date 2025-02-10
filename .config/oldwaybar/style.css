@@ -1,0 +1,15 @@
+/* Default style for workspaces */
+#custom-workspaces {
+    color: #ffffff; /* Default text color */
+    font-family: "FontAwesome"; /* Use a custom font if desired */
+    font-size: 14px;
+}
+
+/* Style for the active workspace */
+#custom-workspaces .active {
+    color: #ff0000; /* Highlight color for active workspace */
+    font-weight: bold; /* Make it bold */
+    background-color: #333333; /* Optional: Add a background color */
+    padding: 2px 5px; /* Optional: Add padding */
+    border-radius: 4px; /* Optional: Add rounded corners */
+}

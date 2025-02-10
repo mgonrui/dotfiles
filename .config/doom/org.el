@@ -4,6 +4,11 @@
 ;; hotkey for opening inbox capture
 (map! :leader
       "c i" (lambda () (interactive) (org-capture nil "i")))
+
+;; Make sure that the weekdays in the time stamps of your Org mode files and in the agenda appear in English.
+(setq system-time-locale "C")
+;; set calendar to start weeks on monday
+(setq calendar-week-start-day 1)
 ;; set org directory path
 (setq org-directory "~/documents/org/")
 ;; enable optional org modules
