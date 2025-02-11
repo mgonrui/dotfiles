@@ -80,32 +80,37 @@ html:not([privatebrowsingmode="temporary"]) #sidebar-header {
 }
 
 html:not([privatebrowsingmode="temporary"]) #sidebar-box {
-  --uc-sidebar-width: 60px;
-  --uc-sidebar-hover-width: 360px;
+  --sidebar-width: 60px;
+  --sidebar-hover-width: 360px;
   position: relative;
-  min-width: var(--uc-sidebar-width) !important;
-  width: var(--uc-sidebar-width) !important;
-  max-width: var(--uc-sidebar-width) !important;
+  min-width: var(--sidebar-width) !important;
+  width: var(--sidebar-width) !important;
+  max-width: var(--sidebar-width) !important;
   z-index: 1;
 }
 
-html:not([privatebrowsingmode="temporary"]) #main-window[sizemode="fullscreen"] #sidebar-box {
-  --uc-sidebar-width: 1px;
+#sidebar-box {
+  --sidebar-width: 360px;
 }
 
-html:not([privatebrowsingmode="temporary"]) #sidebar-splitter {
+#sidebar-splitter {
   display: none;
 }
 
-html:not([privatebrowsingmode="temporary"]) #sidebar {
-  min-width: var(--uc-sidebar-width) !important;
+#sidebar {
+  position: relative !important;
+  overflow:hidden;
+  max-width: var(--sidebar-hover-width) !important;
+  min-width: var(--sidebar-width) !important;
 }
 
-html:not([privatebrowsingmode="temporary"]) #sidebar-box:hover > #sidebar {
-  min-width: var(--uc-sidebar-hover-width) !important;
+#sidebar-box:hover > #sidebar {
+  min-width: var(--sidebar-hover-width) !important;
+  transition: all 200ms !important;
+  max-width: var(--sidebar-visible-width) !important;
 }
 
-html:not([privatebrowsingmode="temporary"]) .sidebar-panel {
+.sidebar-panel {
   background-color: transparent !important;
   color: var(--newtab-text-primary-color) !important;
 }
