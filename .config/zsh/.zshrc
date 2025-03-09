@@ -1,6 +1,7 @@
 export LANG="en_US.UTF-8"
 export ZDOTDIR="$HOME/.config/zsh"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 # Created by `pipx` on 2024-10-20 16:46:56
 export PATH="$PATH:/home/mgr/.local/bin"
 export HEADER42_LOGIN="mariogo2"
@@ -95,4 +96,3 @@ vterm_prompt_end() {
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
 
-export PATH=$PATH:/home/mgr/.spicetify

@@ -2,7 +2,8 @@ set selection-clipboard clipboard
 set statusbar-h-padding 10
 set statusbar-v-padding 5 
 set page-padding 1 
-set scroll-step 100 
+set scroll-step 100
+set highlight-transparency 0.15
 map i recolor
 map <C-l> feedkeys ":blist <Tab>"
 map <C-;> feedkeys ":blist . <Return>"
@@ -43,9 +44,11 @@ set inputbar-fg                 "#d4be98" # bg
 set statusbar-bg                "#4f4743" # fg2
 set statusbar-fg                "#d4be98" # bg
 
-set highlight-color             "#98971a" # bright:yellow
+# set highlight-color             "#98971a" # bright:yellow
+set highlight-color "rgba(255, 255, 0, 0.5)"
 #set highlight-color             "#d4be98" # bright:yellow
-set highlight-active-color      "#fe8019" # bright:orange
+# set highlight-active-color      "#fe8019" # bright:orange
+set highlight-active-color "rgba(255, 255, 0, 0.5)"
 # set highlight-active-color      "#fe8019" # bright:orange
 
 set default-bg                  "#2e2c2b" # bg

@@ -6,7 +6,7 @@
 (map! :leader
       "h l" #'evil-lookup)
 (map! :leader
-      "w o" #'toggle-golden-ratio)
+      "w o" #'golden-ratio-toggle-widescreen)
 ;; split window horizontally and move cursor to the right
 (map! :leader
       "s h" (lambda ()
@@ -27,13 +27,14 @@
 
 ;; USER INTERFACE
 ;; See 'C-h v doom-font' for documentation and more examples of what they accept
-(setq doom-font (font-spec :family "Agave Nerd Font" :size 20 :weight 'semi-light);; the primary font to use
+(setq doom-font (font-spec :family "Agave Nerd Font" :size 25 :weight 'semi-light);; the primary font to use
       doom-variable-pitch-font (font-spec :family "Agave Nerd Font" :size 15) ;; a non-monospace font (where applicable)
       doom-big-font (font-spec :family "Agave Nerd Font" :size 24) ;; used for `doom-big-font-mode' use this for presentations or streaming.
       doom-serif-font (font-spec :family "Agave Nerd Font" :size 24) ;; for the `fixed-pitch-serif' face
       doom-symbol-font (font-spec :family "Agave Nerd Font" :size 24)) ;; for symbols
 ;; set default theme
 (setq doom-theme 'doom-gruvbox)
+
 ;; Must be used *after* the theme is loaded
 ;; home screen configuration
 (setq fancy-splash-image (concat doom-user-dir "/images/gruvbox_emacs_logo_cropped.png"))
@@ -49,12 +50,7 @@
 ;; golden ratio resizing
 (require 'golden-ratio)
 (golden-ratio-mode 1)
-;; function to toggle golden ratio
-(defun toggle-golden-ratio()
-  (interactive)
-  (if (= golden-ratio-adjust-factor 0)
-      (golden-ratio-adjust 1)
-    (golden-ratio-adjust 0)))
+(golden-ratio-adjust 0) ;; turned off by default
 ;; hook golden ratio to movement commands
 (setq golden-ratio-extra-commands
 (append golden-ratio-extra-commands
@@ -100,7 +96,7 @@ select-window-9)))
 ;; set doom dir
 ;; (setq doom-user-dir "~/.dotfiles/.config/doom/")
 ;; load org configuration
-(load! "~/.config/doom/org.el")
+(load! (concat doom-user-dir "org.el"))
 ;; load libraries folder
 (add-load-path! "libs")
 (setq electric-pair-mode 1)
@@ -118,7 +114,7 @@ select-window-9)))
   (compile compile-command))
 ;; column marker
 (add-load-path! "libs/column-marker")
-(load! "~/.config/doom/libs/column-marker/column-marker.el")
+(load! (concat doom-user-dir "libs/column-marker/column-marker.el"))
 (add-hook 'c-mode-hook (lambda () (interactive) (column-marker-1 80))) ;; mark a line if its more than 80 col long
 ;; insert 42  header plugin
 ;; (add-load-path! "libs/42header_emacs")

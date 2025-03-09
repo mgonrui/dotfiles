@@ -2,7 +2,7 @@
     border: none;
     border-radius: 90px;
     font-family: "Agave Nerd Font";
-    font-size: medium;
+    font-size: large;
     min-height: 0;
 }
 window#waybar {
@@ -24,6 +24,7 @@ window#waybar.top label.module {
 #workspaces button.empty {
     padding: 0 10px;
     background: #202020;
+    color: #c5aa7f;
     box-shadow: none;
 
 }
@@ -44,7 +45,11 @@ window#waybar.top label.module {
     background-color: rgba(0, 0, 0, 0);
     color: #c5aa7f;
     font-family: "Agave Nerd Font";
-    font-size: medium;
+    font-size: large;
+}
+
+#custom-brightness {
+    color: #c5aa7f
 }
 #memory {
     color: #c5aa7f

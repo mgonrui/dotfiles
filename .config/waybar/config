@@ -5,7 +5,12 @@
     "width": 1,
     "spacing": 1,
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["memory", "pulseaudio", "battery", "clock",],
+    "modules-right": [
+                     "pulseaudio",
+                     "custom/brightness",
+                     "battery",
+                     // "memory",
+                     "clock",],
 
     // Modules configuration
     "hyprland/workspaces": {
@@ -13,30 +18,36 @@
         "persistent-workspaces": {
              "*": [ 10, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         },
-	    "format": "{icon}",
+	    "format": "\n{icon}\n",
         "format-icons": {
-            "1": "\n1\n",
-            "2": "\n2\n",
-            "3": "\n3\n",
-            "4": "\n4\n",
-            "5": "\n5\n",
-            "6": "\n6\n",
-            "7": "\n7\n",
-            "8": "\n8\n",
-            "9": "\n9\n",
-            "10": "\n0\n",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0",
         }
     },
     "clock": {
         "tooltip": false,
         "timezone": "Europe/Madrid",
         "interval": 60,
-        "format": "\n{:%d\n%m\n\n󰥔\n%H\n%M\n}"
+        "format": "\n{:%a\n%d\n%m\n\n󰥔\n%H\n%M\n}"
     },
     "memory": {
         "tooltip": false,
-        "format": "\n\n{percentage}\n",
+        "format": "\n{percentage}\n",
 
+    },
+    "custom/brightness": {
+    "format": "\n{percentage}\n",
+    "exec": "~/.config/waybar/scripts/get_brightness.sh",
+    "signal": 10,
+    "return-type": "json"
     },
     "battery": {
         "states": {
@@ -47,16 +58,17 @@
         "full-at": 200,
         "tooltip": false,
         "format": "{icon}\n{capacity}\n",
-        "format-charging": "{icon}\n{capacity}\n",
+        "format-charging": "\n{icon}\n{capacity}\n",
         "format-plugged": "\n{icon}\n{capacity}\n",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["", "", "", "", ""],
+        "interval": 3 // UPDATE BATTERY STATUS EVERY 3 SECONDS
     },
     "pulseaudio": {
         "tooltip": false,
         "on-scroll-up": "",
         "on-scroll-down": "",
-        "format": "{icon}\n{volume}\n",
+        "format": "\n{icon}\n{volume}\n",
         "format-icons": ["󰕿", "󰖀", "󰕾"]
     },
 }
