@@ -43,10 +43,11 @@
         "format": "\n{percentage}\n",
 
     },
+
     "custom/brightness": {
     "format": "\n{percentage}\n",
-    "exec": "~/.config/waybar/scripts/get_brightness.sh",
-    "signal": 10,
+    "exec": "~/.config/waybar/scripts/get_brightness_level.sh",
+    "signal": 10, // set signal to be able to refresh it with a command when changing the screen brightness
     "return-type": "json"
     },
     "battery": {
@@ -69,6 +70,16 @@
         "on-scroll-up": "",
         "on-scroll-down": "",
         "format": "\n{icon}\n{volume}\n",
-        "format-icons": ["󰕿", "󰖀", "󰕾"]
-    },
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+
+        },
+    }
 }
