@@ -1,9 +1,8 @@
 export LANG="en_US.UTF-8"
 export ZDOTDIR="$HOME/.config/zsh"
-export PATH="$HOME/.config/emacs/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
-# Created by `pipx` on 2024-10-20 16:46:56
-export PATH="$PATH:/home/mgr/.local/bin"
+export PATH="$PATH:$HOME/.config/emacs/bin"
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/.local/bin"
 export HEADER42_LOGIN="mariogo2"
 export HEADER42_MAIL="mariogo2@student.42malaga.com"
 # hook direnv to zsh
@@ -29,8 +28,8 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # load aliases
-if [ -f ~/.config/zsh/aliases.sh ]; then
-    . ~/.config/zsh/aliases.sh
+if [ -f $HOME/.config/zsh/aliases.sh ]; then
+    . $HOME/.config/zsh/aliases.sh
 fi
 
 
@@ -95,4 +94,3 @@ vterm_prompt_end() {
 }
 setopt PROMPT_SUBST
 PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
-

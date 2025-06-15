@@ -1,75 +1,46 @@
 {
     "layer": "top",
-    "position": "left",
-    "height": 750,
+    "position": "top",
+    "height": 0,
     "width": 1,
     "spacing": 1,
     "modules-left": ["hyprland/workspaces"],
     "modules-right": [
                      "pulseaudio",
+                     "bluetooth",
                      "custom/brightness",
-                     "battery",
-                     // "memory",
-                     "clock",],
-
-    // Modules configuration
+                     "hyprland/language",
+                     "clock",
+                     ],
     "hyprland/workspaces": {
         "tooltip": false,
+        "all-outputs": true,
+        "move-to-monitor": true,
+        "show-special": true,
+        "special-visible-only": true,
         "persistent-workspaces": {
              "*": [ 10, 1, 2, 3, 4, 5, 6, 7, 8, 9],
         },
-	    "format": "\n{icon}\n",
+	    "format": " {icon} ",
         "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "0",
+            "2": "1 󰖟 ",
+            "3": "2 󰭻 ",
+            "4": "3  ",
+            "5": "4  ",
+            "6": "5  ",
+            "7": "6  ",
+            "8": "7  ",
+            "9": "8 󰟀 ",
+            "10": "9 ",
+            "1": "0 ",
+            "terminal": "S ",
         }
-    },
-    "clock": {
-        "tooltip": false,
-        "timezone": "Europe/Madrid",
-        "interval": 60,
-        "format": "\n{:%a\n%d\n%m\n\n󰥔\n%H\n%M\n}"
-    },
-    "memory": {
-        "tooltip": false,
-        "format": "\n{percentage}\n",
-
-    },
-
-    "custom/brightness": {
-    "format": "\n{percentage}\n",
-    "exec": "~/.config/waybar/scripts/get_brightness_level.sh",
-    "signal": 10, // set signal to be able to refresh it with a command when changing the screen brightness
-    "return-type": "json"
-    },
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "full-at": 200,
-        "tooltip": false,
-        "format": "{icon}\n{capacity}\n",
-        "format-charging": "\n{icon}\n{capacity}\n",
-        "format-plugged": "\n{icon}\n{capacity}\n",
-        "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""],
-        "interval": 3 // UPDATE BATTERY STATUS EVERY 3 SECONDS
     },
     "pulseaudio": {
         "tooltip": false,
         "on-scroll-up": "",
         "on-scroll-down": "",
-        "format": "\n{icon}\n{volume}\n",
+        "format": " {icon}  {volume} ",
         "format-muted": "",
         "format-icons": {
             "headphone": "",
@@ -79,7 +50,78 @@
             "portable": "",
             "car": "",
             "default": ["", "", ""]
-
         },
-    }
+    },
+    "hyprland/language": {
+        "format": "  {}",
+        "format-en": "US",
+        "format-es": "ES",
+    },
+    "bluetooth": {
+        "tooltip": false,
+        "format": " {status}",
+        "format-connected": " {device_alias}",
+        "format-disabled": " off",
+        "format-off": " idk what state is this",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+        // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    },
+    "custom/brightness": {
+        "tooltip": false,
+        "format": "  {percentage} ",
+        "exec": "~/.config/waybar/scripts/get_brightness_level.sh",
+        "signal": 10, // set signal to be able to refresh it with a command when changing the screen brightness
+        "return-type": "json"
+    },
+    "clock": {
+        "tooltip": false,
+        "timezone": "Europe/Madrid",
+        "interval": 60,
+        "format": "   {:%a %d/%m  󰥔  %H:%M }"
+    },
+
+// not used
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "full-at": 200,
+        "tooltip": false,
+        "format": "{icon} {capacity} ",
+        "format-charging": " {icon} {capacity} ",
+        "format-plugged": " {icon} {capacity} ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 3 // UPDATE BATTERY STATUS EVERY 3 SECONDS
+    },
+ "custom/space": {
+        "format": " ",
+    },
+    "memory": {
+        "tooltip": false,
+        "format": "  {percentage} ",
+
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "    {usage} ",
+    },
+    "temperature": {
+        "interval": 2,
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": " {temperatureC}"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10000
+    },
+
 }

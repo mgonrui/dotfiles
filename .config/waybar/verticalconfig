@@ -1,0 +1,105 @@
+{
+    "layer": "top",
+    "position": "left",
+    "height": 750,
+    "width": 1,
+    "spacing": 1,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-right": [
+    //                 "custom/space",
+     //                "tray",
+     //                "memory",
+//                     "cpu",
+                     "pulseaudio",
+                     "custom/brightness",
+                     "clock",
+                     ],
+    "hyprland/workspaces": {
+        "tooltip": false,
+        "persistent-workspaces": {
+             "*": [ 10, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        },
+	    "format": "\n{icon}\n",
+        "format-icons": {
+            "1": "1 󰖟",
+            "2": "2 󰭻",
+            "3": "3 ",
+            "4": "4 ",
+            "5": "5 ",
+            "6": "6 ",
+            "7": "7 ",
+            "8": "8 󰟀",
+            "9": "9 ",
+            "10": "0 ",
+        }
+    },
+    "pulseaudio": {
+        "tooltip": false,
+        "on-scroll-up": "",
+        "on-scroll-down": "",
+        "format": "\n{icon}  \n{volume}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+    },
+    "custom/brightness": {
+    "format": "\n{percentage}\n",
+    "exec": "~/.config/waybar/scripts/get_brightness_level.sh",
+    "signal": 10, // set signal to be able to refresh it with a command when changing the screen brightness
+    "return-type": "json"
+    },
+    "clock": {
+        "tooltip": false,
+        "timezone": "Europe/Madrid",
+        "interval": 60,
+        "format": "\n{:%a\n%d\n%m\n\n󰥔\n%H\n%M\n}"
+    },
+
+// not used
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "full-at": 200,
+        "tooltip": false,
+        "format": "{icon}\n{capacity}\n",
+        "format-charging": "\n{icon}\n{capacity}\n",
+        "format-plugged": "\n{icon}\n{capacity}\n",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 3 // UPDATE BATTERY STATUS EVERY 3 SECONDS
+    },
+ "custom/space": {
+        "format": "\n",
+    },
+    "memory": {
+        "tooltip": false,
+        "format": "\n\n{percentage}\n",
+
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "\n  \n{usage}\n",
+    },
+    "temperature": {
+        "interval": 2,
+        "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "\n{temperatureC}"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10000
+    },
+
+}
