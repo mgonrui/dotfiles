@@ -1,15 +1,16 @@
 {
     "security.workspace.trust.untrustedFiles": "newWindow",
-    "clangd.path": "/home/mgr/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/19.1.2/clangd_19.1.2/bin/clangd",
-    "editor.fontFamily": "Agave Nerd Font",
-    "editor.inlayHints.fontFamily": "3270 Nerd Font ",
+    "sdfclangd.path": "/home/mgr/.config/VSCodium/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/19.1.2/clangd_19.1.2/bin/clangd",
+    "editor.fontFamily": "Iosevka Nerd Font",
+    "editor.semanticHighlighting.enabled": false,
+    "editor.inlayHints.fontFamily": "Iosevka Nerd Font ",
     "editor.cursorBlinking": "solid",
     "code-runner.runInTerminal": true,
     "explorer.confirmDragAndDrop": false,
-    "debug.console.fontFamily": "3270 Nerd Font",
-    "scm.inputFontFamily": "3270 Nerd Font",
-    "editor.lineHeight": 18,
-    "editor.codeLensFontFamily": "Agave Nerd Font",
+    "debug.console.fontFamily": "Iosevka Nerd Font",
+    "scm.inputFontFamily": "Iosevka Nerd Font",
+    "editor.lineHeight": 21,
+    "editor.codeLensFontFamily": "Iosevka Nerd Font",
     "editor.fontLigatures": false,
     "editor.fontWeight": "normal",
     "sonarlint.ls.javaHome": "/usr/lib/jvm/java-20-openjdk",
@@ -187,6 +188,6 @@
         "stash-push:command",
         "switch:command"
     ],
-    "editor.fontSize": 15,
+    "editor.fontSize": 21,
     "terminal.integrated.lineHeight": 1
 } 

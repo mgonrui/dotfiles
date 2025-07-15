@@ -26,7 +26,7 @@ foreground = "0xd4be98"
 size = 18
 
 [font.normal]
-family = "Agave Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Large"
 
 [window.padding]

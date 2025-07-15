@@ -1,32 +1,32 @@
-@define-color gruvbox-bg0 #282828;
-@define-color gruvbox-bg1 #3c3836;
-@define-color gruvbox-bg2 #504945;
-@define-color gruvbox-bg3 #665c54;
-@define-color gruvbox-bg4 #7c6f64;
+@define-color bg0 #2d353b;
+@define-color bg1 #343f44;
+@define-color bg2 #3d484d;
+@define-color bg3 #475258;
+@define-color bg4 #4f585e;
 
-@define-color gruvbox-fg0 #fbf1c7;
-@define-color gruvbox-fg1 #ebdbb2;
-@define-color gruvbox-fg2 #d5c4a1;
-@define-color gruvbox-fg3 #bdae93;
-@define-color gruvbox-fg4 #a89984;
+@define-color fg0 #d5c9ab;
+@define-color fg1 #d3c6aa;
+@define-color fg2 #c9b99a;
+@define-color fg3 #b5a992;
+@define-color fg4 #a39b8b;
 
-@define-color gruvbox-dark-red #cc241d;
-@define-color gruvbox-dark-green #98971a;
-@define-color gruvbox-dark-yellow #d79921;
-@define-color gruvbox-dark-blue #458588;
-@define-color gruvbox-dark-purple #b16286;
-@define-color gruvbox-dark-aqua #689d6a;
-@define-color gruvbox-dark-orange #d65d0e;
-@define-color gruvbox-dark-gray #928374;
+@define-color dark-red #e67e80;
+@define-color dark-green #a7c080;
+@define-color dark-yellow #dbbc7f;
+@define-color dark-blue #7fbbb3;
+@define-color dark-purple #d699b6;
+@define-color dark-aqua #83c092;
+@define-color dark-orange #e69875;
+@define-color dark-gray #859289;
 
-@define-color gruvbox-light-red #fb4934;
-@define-color gruvbox-light-green #b8bb26;
-@define-color gruvbox-light-yellow #fabd2f;
-@define-color gruvbox-light-blue #83a598;
-@define-color gruvbox-light-purple #d3869b;
-@define-color gruvbox-light-aqua #8ec07c;
-@define-color gruvbox-light-orange #fe8019;
-@define-color gruvbox-light-gray #a89984;
+@define-color light-red #e67e80;
+@define-color light-green #a7c080;
+@define-color light-yellow #dbbc7f;
+@define-color light-blue #7fbbb3;
+@define-color light-purple #d699b6;
+@define-color light-aqua #83c092;
+@define-color light-orange #e69875;
+@define-color light-gray #a39b8b;
 
 * {
     border: none;
@@ -51,7 +51,7 @@
 #memory,
 #disk,
 #tray {
-    background: @gruvbox-bg0;
+    background: @bg0;
     opacity: 1.0;
     padding: 1.5px 7px 1.5px 7px;
     margin-top: 5px;
@@ -62,28 +62,28 @@
 }
 
 #workspaces {
-    background: @gruvbox-bg0;
+    background: @bg0;
     border-radius: 60px;
 }
 
 #clock {
-    color: @gruvbox-light-aqua;
+    color: @light-aqua;
     border-radius: 13px 60px 60px 13px;
 }
 
 #language {
-    color: @gruvbox-light-purple;
+    color: @light-purple;
 }
 #custom-brightness {
-    color: @gruvbox-light-yellow;
+    color: @light-yellow;
 }
 
 #bluetooth {
-    color: @gruvbox-light-blue;
+    color: @light-blue;
 }
 
 #pulseaudio {
-    color: @gruvbox-light-red;
+    color: @light-red;
   border-radius: 60px 13px 13px 60px;
 }
 
@@ -94,7 +94,7 @@ window#waybar {
 }
 
 #workspaces button {
-    color: @gruvbox-dark-gray;
+    color: @dark-gray;
     margin-right: 5px;
     padding-right: 0px;
     padding-left: 0px;
@@ -103,7 +103,7 @@ window#waybar {
 
 
 #workspaces button.visible {
-    box-shadow: inset 0 -1px @gruvbox-bg0;
+    box-shadow: inset 0 -1px @bg0;
 }
 
 #workspaces button.urgent {
@@ -111,17 +111,17 @@ window#waybar {
 }
 
 #workspaces button.persistent {
-    color: @gruvbox-fg4;
+    color: @fg4;
 }
 
 #workspaces button.empty {
-    color: @gruvbox-bg2;
+    color: @bg2;
 }
 
 #workspaces button.active {
-    color: @gruvbox-fg0;
+    color: @fg0;
 }
 
 #workspaces button.focused {
-    color: @gruvbox-light-red;
+    color: @light-red;
 }
