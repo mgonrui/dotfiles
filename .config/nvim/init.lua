@@ -860,26 +860,36 @@ require('lazy').setup({
     },
   },
 
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+  -- {
+  --   'ellisonleao/gruvbox.nvim',
+  --   priority = 1000, -- Make sure to load this before all the other start plugins.
+  --   config = function()
+  --     ---@diagnostic disable-next-line: missing-fields
+  --     require('gruvbox').setup {
+  --       italics = false,
+  --       disable_italic_comments = true,
+  --       styles = {
+  --         comments = { italic = false }, -- Disable italics in comments
+  --       },
+  --     }
+  --     vim.cmd.colorscheme 'gruvbox'
+  --   end,
+  -- },
+  --
+  {
     'ellisonleao/everforest-nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
       ---@diagnostic disable-next-line: missing-fields
       require('everforest').setup {
         italics = false,
+        background = 'hard',
+        ui_contrast = 'low',
         disable_italic_comments = true,
         styles = {
           comments = { italic = false }, -- Disable italics in comments
         },
       }
-
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       vim.cmd.colorscheme 'everforest'
     end,
   },
@@ -938,13 +948,14 @@ require('lazy').setup({
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        vim.api.nvim_set_hl(0, '@function.call.c', { fg = '#d3c6aa', bg = '', italic = false, underline = false, sp = '' }),
-        vim.api.nvim_set_hl(0, '@operator.c', { fg = '#d3c6aa', bg = '', italic = false, underline = false, sp = '' }),
-        vim.api.nvim_set_hl(0, '@variable.parameter.c', { fg = '#7fbbb3', bg = '', italic = false, underline = false, sp = '' }),
-        vim.api.nvim_set_hl(0, '@variable.declaration.c', { fg = '#7fbbb3', bg = '', italic = false, underline = false, sp = '' }),
-        vim.api.nvim_set_hl(0, '@punctuation.delimiter.c', { fg = '#d3c6aa', bg = '', italic = false, underline = false, sp = '' }),
-        vim.api.nvim_set_hl(0, '@property.c', { fg = '#d3c6aa', bg = '', italic = false, underline = false, sp = '' }),
-        vim.api.nvim_set_hl(0, '@number.c', { fg = '#d3c6aa', bg = '', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@function.call.c', { link = '@variable', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@operator.c', { link = '@variable', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@variable.parameter.c', { link = '@variable.member', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@variable.declaration.c', { link = '@variable.member', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@punctuation.delimiter.c', { link = '@variable', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@property.c', { link = '@variable', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@number.c', { link = '@variable', italic = false, underline = false, sp = '' }),
+        vim.api.nvim_set_hl(0, '@constant.c', { link = '@constant.builtin', italic = false, underline = false, sp = '' }),
         additional_vim_regex_highlighting = { 'ruby' },
       },
       indent = { enable = true, disable = { 'ruby' } },

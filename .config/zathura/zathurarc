@@ -16,44 +16,44 @@ map <C--> zoom out
 
 set font "Sarasa Mono K 13"
 
-set notification-error-bg       "#2e2c2b"
-set notification-error-fg       "#d4be98"
-set notification-warning-bg     "#2e2c2b"
-set notification-warning-fg     "#d4be98"
-set notification-bg             "#2e2c2b"
-set notification-fg             "#d4be98"
-set completion-bg               "#31363b"
-set completion-fg               "#d4be98"
-set completion-group-bg         "#3c3836"
-set completion-group-fg         "#88909f"
-set completion-highlight-bg     "#6cb6eb"
-set completion-highlight-fg     "#31363b"
+# Everforest color scheme (hard, dark)
+set notification-error-bg       "#3c474d"
+set notification-error-fg       "#d3c6aa"
+set notification-warning-bg     "#3c474d"
+set notification-warning-fg     "#d3c6aa"
+set notification-bg             "#3c474d"
+set notification-fg             "#d3c6aa"
+set completion-bg               "#434b53"
+set completion-fg               "#d3c6aa"
+set completion-group-bg         "#4b565c"
+set completion-group-fg         "#859289"
+set completion-highlight-bg     "#7fbbb3"
+set completion-highlight-fg     "#2d353b"
 
 # Define the color in index mode
-set index-bg                    "#2e2c2b"
-set index-fg                    "#d4be98"
-set index-active-fg             "#2e2c2b"
-set index-active-bg             "#98971a"
+set index-bg                    "#2d353b"
+set index-fg                    "#d3c6aa"
+set index-active-fg             "#2d353b"
+set index-active-bg             "#a7c080"
 
+set inputbar-bg                 "#2d353b"
+set inputbar-fg                 "#d3c6aa"
 
-set inputbar-bg                 "#2e2c2b"
-set inputbar-fg                 "#d4be98"
+set statusbar-bg                "#475258"
+set statusbar-fg                "#d3c6aa"
 
-set statusbar-bg                "#4f4743"
-set statusbar-fg                "#d4be98"
+set highlight-color "rgba(167, 192, 128, 0.5)"
+set highlight-active-color "rgba(167, 192, 128, 0.5)"
 
-set highlight-color "rgba(255, 255, 0, 0.5)"
-set highlight-active-color "rgba(255, 255, 0, 0.5)"
-
-set default-bg                  "#2e2c2b"
-set default-fg                 "#d4be98"
+set default-bg                  "#2d353b"
+set default-fg                  "#d3c6aa"
 set render-loading              true
-set render-loading-bg           "#2e2c2b"
-set render-loading-fg           "#d4be98"
+set render-loading-bg           "#2d353b"
+set render-loading-fg           "#d3c6aa"
 
 # Recolor book content's color
-set recolor-lightcolor          "#2e2c2b"
-set recolor-darkcolor           "#d4be98"
+set recolor-lightcolor          "#2d353b"
+set recolor-darkcolor           "#d3c6aa"
 
 set recolor                     "true"
 # set recolor-keephue             true      # keep original color
