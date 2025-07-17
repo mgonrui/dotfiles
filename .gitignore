@@ -24,3 +24,5 @@
 .config/zsh/.zprofile
 
 .config/doom
+
+.config/nvim

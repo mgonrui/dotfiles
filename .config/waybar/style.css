@@ -119,7 +119,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @fg0;
+    color: @light-green;
 }
 
 #workspaces button.focused {
