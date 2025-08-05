@@ -114,3 +114,7 @@ html:not([privatebrowsingmode="temporary"]) #sidebar-box {
   background-color: transparent !important;
   color: var(--newtab-text-primary-color) !important;
 }
+
+#TabsToolbar { visibility: collapse !important; }
+#sidebar-header { visibility: collapse !important; }
+#titlebar { appearance: none !important }

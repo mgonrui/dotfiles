@@ -26,3 +26,8 @@
 .config/doom
 
 .config/nvim
+
+.config/qBittorrent/*
+.config/qBittorrent/*/
+!.config/qBittorrent/qBittorrent.conf
+!.config/qBittorrent/themes
