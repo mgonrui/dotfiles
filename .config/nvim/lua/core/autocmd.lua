@@ -53,3 +53,10 @@ vim.api.nvim_create_autocmd('User', {
     require('arrow.persist').load_cache_file()
   end,
 })
+
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = "*.kbd",
+  callback = function()
+    vim.bo.filetype = "kbd"
+  end,
+})

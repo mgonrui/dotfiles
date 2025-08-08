@@ -6,7 +6,7 @@ local act = wezterm.action
 config.detect_password_input = true -- Censor text when typing a password
 config.enable_tab_bar = true -- Enable tab bar
 config.use_fancy_tab_bar = false -- Disable fancy tab bar
-config.tab_bar_at_bottom = true -- Display tab bar at bottom
+config.tab_bar_at_bottom = false -- Display tab bar at bottom
 config.show_new_tab_button_in_tab_bar = false -- Disable new tab button
 config.enable_scroll_bar = false -- Disable scroll bar
 config.window_padding = { -- Window padding
@@ -36,6 +36,7 @@ config.automatically_reload_config = true -- Automatically reload config when ch
 config.alternate_buffer_wheel_scroll_speed = 1
 config.anti_alias_custom_block_glyphs = true -- Anti-aliasing makes lines look smoother but may not look so nice at smaller font sizes.
 config.mouse_wheel_scrolls_tabs = false -- Disable mouse scrolling for tabs
+config.bypass_mouse_reporting_modifiers = 'ALT' -- Key to prevent mouse events from being passed to programs.
 config.mouse_bindings = {
 	{
 		event = { Down = { streak = 1, button = { WheelUp = 1 } } },
@@ -45,21 +46,39 @@ config.mouse_bindings = {
 		event = { Down = { streak = 1, button = { WheelDown = 1 } } },
 		action = wezterm.action.ScrollByLine(4),
 	},
+
 }
 
 -- Multiplexer
 config.mux_enable_ssh_agent = true
 config.default_mux_server_domain = "local"
-config.leader = { key = "m", mods = "CTRL", timeout_milliseconds = 2000 }
+
+config.leader = { key = "RightAlt", mods = "NONE", timeout_milliseconds = 2000 }
+
+wezterm.on('update-right-status', function(window, pane)
+  local leader = ''
+  if window:leader_is_active() then
+    leader = wezterm.format {
+  { Attribute = { Intensity = 'Bold' } },
+  { Foreground = { Color = "#E67E80" } },
+  { Text = 'LEADER'},
+  'ResetAttributes',
+  { Text = '                                                                                                                                                                   ' },
+}
+  
+  end
+  window:set_right_status(leader)
+end)
+
 config.keys = {
 	{
 		mods = "LEADER",
-		key = "c",
+		key = "t",
 		action = wezterm.action.SpawnTab("CurrentPaneDomain"),
 	},
 	{
 		mods = "LEADER",
-		key = "x",
+		key = "w",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{
@@ -131,36 +150,6 @@ for i = 0, 9 do -- leader + number to activate that tab
 		action = wezterm.action.ActivateTab(i - 1),
 	})
 end
-
--- Change behavior inside neovim
-local is_in_nvim = false
-
-local function change_behavior_inside_nvim(window) -- Function to change behavior inside neovim
-	if is_in_nvim then
-		config.mouse_bindings = {} -- Set default mouse bindings
-	else
-		config.mouse_bindings =
-			{ -- Set scrolling sensitivity for Wezterm. (This will break horizontal scrolling in Neovim, that's why it must not be loaded inside it)
-				{
-					event = { Down = { streak = 1, button = { WheelUp = 1 } } },
-					action = wezterm.action.ScrollByLine(-4),
-				},
-				{
-					event = { Down = { streak = 1, button = { WheelDown = 1 } } },
-					action = wezterm.action.ScrollByLine(4),
-				},
-			}
-	end
-	window:set_config_overrides(config) -- Apply the updated config
-end
-
-wezterm.on("update-status", function(window, pane) -- Listen for pane events to detect Neovim
-	local new_nvim_state = pane:get_foreground_process_name():find("n?vim") ~= nil -- Check if the current pane is running Neovim
-	if new_nvim_state ~= is_in_nvim then -- Only update if state changed
-		is_in_nvim = new_nvim_state
-		change_behavior_inside_nvim(window)
-	end
-end)
 
 -- Color scheme (Everforest)
 config.colors = {

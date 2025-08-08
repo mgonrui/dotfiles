@@ -12,8 +12,8 @@ vim.o.incsearch = true -- Show matches as you type
 -- Behavior settings
 vim.o.splitright = true -- When use vertical split, split to the right
 vim.o.splitbelow = true -- When use horizontal split, split to the bottom
-vim.o.scrolloff = 10 -- Minimal number of screen lines to keep above and below the cursor
-vim.o.sidescrolloff = 8 -- Minimal number of screen lines to keep leftoff and rightoff the cursor
+vim.o.scrolloff = 1 -- Minimal number of screen lines to keep above and below the cursor
+vim.o.sidescrolloff = 1 -- Minimal number of screen lines to keep leftoff and rightoff the cursor
 vim.o.mouse = 'a' -- Enable mouse mode
 vim.o.breakindent = false -- Enable break indent
 vim.o.confirm = true -- Enables interactive confirmation prompts before losing unsaved changes

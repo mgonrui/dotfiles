@@ -86,6 +86,7 @@ require('lazy').setup {
   require 'plugins.nvim-dap', -- Integrated debugger
   require 'plugins.orgmode', -- Org mode
   require 'plugins.nvim-dap-ui', -- Prettier UI for debugger
+  require 'plugins.42-header',
   -- require 'plugins.mason-nvim-dap',
   -- require 'plugins.projectmarks',
   -- require 'plugins.indent-blankline', -- Add indentation guides even on blank lines
@@ -94,5 +95,9 @@ require('lazy').setup {
   -- themes
   require 'plugins.colorschemes.everforest',
 }
+
+
+
+
 vim.cmd.colorscheme 'everforest' -- Load colorscheme (If it's a plugin it needs to be loaded after them)
 vim.api.nvim_set_hl(0, 'Visual', { bg = '#464E53' }) -- Change bg in visual selection (It needs to be loaded after the colorscheme)

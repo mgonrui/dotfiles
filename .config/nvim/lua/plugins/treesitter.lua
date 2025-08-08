@@ -1,3 +1,17 @@
+
+local function custom_parsers()
+  local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+  parser_config.kanata = {  -- Kanata config
+    install_info = {
+      url = "https://github.com/postsolar/tree-sitter-kanata",
+      files = { "src/parser.c" },
+      branch = "main",
+    },
+    filetype = "kbd",
+  }
+  -- Add other custom parsers here...
+end
+
 return {
 
   'nvim-treesitter/nvim-treesitter', -- Highlight, edit, and navigate code
@@ -6,7 +20,7 @@ return {
   -- [[ Configure Treesitter ]]
   --
   opts = {
-    -- ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+    ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'kanata' },
     auto_install = true, -- Autoinstall languages that are not installed
     highlight = {
       enable = true,
@@ -27,10 +41,8 @@ return {
     },
      -- indent = { enable = true, disable = { 'ruby' } },
    },
-  -- There are additional nvim-treesitter modules that you can use to interact
-  -- with nvim-treesitter. You should go explore a few and see what interests you:
-  --
-  --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
-  --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-  -- --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    config = function(_, opts)
+      custom_parsers() -- Load custom parsers first
+      require("nvim-treesitter.configs").setup(opts)
+    end,
 }

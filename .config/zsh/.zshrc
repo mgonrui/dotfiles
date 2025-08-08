@@ -89,6 +89,11 @@ vterm_printf() {
     fi
 }
 
+42cformat(){
+	find . -type f \( -name "*.c" -o -name "*.h" \) | xargs -I {} sh -c 'nvim --headless "+Stdheader" +wq {} &> /dev/null; c_formatter_42 {} &> /dev/null ; norminette {} | grep -v "Setting locale to en_US"'
+}
+
+
 vterm_prompt_end() {
     vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
 }
