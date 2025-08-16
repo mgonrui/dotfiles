@@ -39,12 +39,13 @@ vim.keymap.set('v', '>', '>gv', { desc = 'Indent right and reselect' })
 vim.keymap.set('n', '<leader>e', ':Explore<CR>', { desc = 'Open file explorer' })
 
 -- Splitting & Resizing
-vim.keymap.set('n', '<leader>sv', ':vsplit<CR>', { desc = 'Split window vertically' })
-vim.keymap.set('n', '<leader>sh', ':split<CR>', { desc = 'Split window horizontally' })
+vim.keymap.set('n', '<leader>/', ':vsplit<CR>', { desc = 'Split window vertically' })
+vim.keymap.set('n', '<leader>-', ':split<CR>', { desc = 'Split window horizontally' })
 vim.keymap.set('n', '<C-Up>', ':resize +2<CR>', { desc = 'Increase window height' })
 vim.keymap.set('n', '<C-Down>', ':resize -2<CR>', { desc = 'Decrease window height' })
 vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', { desc = 'Decrease window width' })
 vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', { desc = 'Increase window width' })
+vim.keymap.set('n', '<leader>w', ':wq<CR>', { desc = 'Quit window' })
 
 vim.keymap.set('n', '<leader>.', ':OilFB<CR>', { desc = 'Open file browser' })
 
@@ -56,6 +57,9 @@ vim.keymap.set('n', '<S-ScrollWheelDown>', '<ScrollWheelRight>', { desc = 'Scrol
 vim.keymap.set('n', '<space><space>x', '<cmd>source %<CR>', { desc = 'Evaluate entire file' })
 vim.keymap.set('n', '<space>x', ':.lua<CR>', { desc = 'Evaluate single line' })
 vim.keymap.set('v', '<space>x', ':lua<CR>', { desc = 'Evaluate selection' })
+
+-- vim.keymap.set('n', '<space>i', ':Inspect<CR>', { desc = 'Evaluate selection' })
+vim.api.nvim_set_keymap('n', '<space>i', ':Inspect<CR>', { noremap = true, silent = false })
 
 -- Quickfix
 vim.keymap.set('n', '<M-j>', '<cmd>cnext<CR>', { desc = 'Quickfix next' })

@@ -4,7 +4,7 @@ image/jpeg=librewolf.desktop;org.gnome.eog.desktop;
 image/png=org.nomacs.ImageLounge.desktop;org.gnome.eog.desktop;
 text/plain=codium.desktop;
 video/mp4=mpv.desktop;vlc.desktop;org.xfce.Parole.desktop;org.kde.kdeconnect_open.desktop;umpv.desktop;
-video/x-matroska=vlc.desktop;
+video/x-matroska=vlc.desktop;org.gnome.Totem.desktop;mpv.desktop;
 x-scheme-handler/http=xfce4-web-browser.desktop;librewolf.desktop;firefox-esr.desktop;
 x-scheme-handler/https=xfce4-web-browser.desktop;librewolf.desktop;firefox-esr.desktop;
 x-scheme-handler/tg=org.telegram.desktop.desktop;
@@ -17,6 +17,7 @@ application/x-extension-shtml=firefox-esr.desktop;
 application/xhtml+xml=firefox-esr.desktop;
 application/x-extension-xhtml=firefox-esr.desktop;
 application/x-extension-xht=firefox-esr.desktop;
+video/vnd.avi=mpv.desktop;
 
 [Default Applications]
 application/pdf=org.pwmt.zathura.desktop;
@@ -34,7 +35,7 @@ text/plain=codium.desktop;
 text/x-csrc=codium.desktop;
 text/x-python=codium.desktop;
 video/mp4=mpv.desktop;
-video/x-matroska=vlc.desktop;
+video/x-matroska=mpv.desktop
 x-scheme-handler/chrome=firefox-esr.desktop
 x-scheme-handler/discord-1038970224050962582=nuclear.desktop
 x-scheme-handler/http=firefox-esr.desktop
@@ -42,6 +43,7 @@ x-scheme-handler/https=firefox-esr.desktop
 x-scheme-handler/morgen=Morgen.desktop
 x-scheme-handler/tg=org.telegram.desktop.desktop
 image/webp=org.gnome.eog.desktop
+video/vnd.avi=mpv.desktop
 
 [Removed Associations]
 application/pdf=calibre-ebook-viewer.desktop;calibre-gui.desktop;brave-browser.desktop;chromium-browser.desktop;org.pwmt.zathura-pdf-mupdf.desktop;sioyek.desktop;draw.desktop;gimp.desktop;

@@ -1,7 +1,7 @@
 alias ls="ls --color"
 # alias make="bear -- make"
 alias hyprpicker="hyprpicker --autocopy"
-alias vim="/bin/nvim"
+alias vim="~/.local/bin/nvim-linux-x86_64.appimage"
 alias vs="codium --reuse-window"
 alias up="sudo dnf update -y"
 alias neofetch="fastfetch"

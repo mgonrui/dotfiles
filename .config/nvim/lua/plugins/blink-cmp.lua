@@ -1,6 +1,6 @@
 return {
   'saghen/blink.cmp', -- Autocompletion
-  build = 'cargo +nightly build --release',
+  build = 'cargo build --release',
   event = 'VimEnter',
   version = '1.*',
   dependencies = {

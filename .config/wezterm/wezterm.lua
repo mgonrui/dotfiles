@@ -1,6 +1,7 @@
 local wezterm = require("wezterm") -- Pull in the wezterm API
 local config = wezterm.config_builder() -- This will hold the configuration.
 local act = wezterm.action
+local colors, metadata = wezterm.color.load_scheme("/home/deckard/.config/wezterm/colorscheme.toml") -- Get scheme from toml
 
 -- UI
 config.detect_password_input = true -- Censor text when typing a password
@@ -9,6 +10,7 @@ config.use_fancy_tab_bar = false -- Disable fancy tab bar
 config.tab_bar_at_bottom = false -- Display tab bar at bottom
 config.show_new_tab_button_in_tab_bar = false -- Disable new tab button
 config.enable_scroll_bar = false -- Disable scroll bar
+config.colors = colors -- Load scheme
 config.window_padding = { -- Window padding
 	left = 6,
 	right = 2,
@@ -19,11 +21,12 @@ config.window_padding = { -- Window padding
 -- Text rendering
 config.harfbuzz_features = { "calt = 0", "clig = 0", "liga = 0" } -- Disable ligatures
 config.font = wezterm.font("Iosevka Nerd Font")
+-- config.font = wezterm.font("VictorMono Nerd Font")
 config.font_size = 20
 config.cell_width = 0.8
 config.cursor_thickness = 1
 config.underline_thickness = 2
-config.line_height = 0.95
+config.line_height = 1
 config.cell_widths = {
 	{ first = 0xe000, last = 0xf8ff, width = 2 },
 	{ first = 0xf0000, last = 0xf1fff, width = 2 },
@@ -36,7 +39,8 @@ config.automatically_reload_config = true -- Automatically reload config when ch
 config.alternate_buffer_wheel_scroll_speed = 1
 config.anti_alias_custom_block_glyphs = true -- Anti-aliasing makes lines look smoother but may not look so nice at smaller font sizes.
 config.mouse_wheel_scrolls_tabs = false -- Disable mouse scrolling for tabs
-config.bypass_mouse_reporting_modifiers = 'ALT' -- Key to prevent mouse events from being passed to programs.
+config.window_close_confirmation = "NeverPrompt" -- Disable confirmation prompt when trying to close wezterm
+config.bypass_mouse_reporting_modifiers = "ALT" -- Key to prevent mouse events from being passed to programs.
 config.mouse_bindings = {
 	{
 		event = { Down = { streak = 1, button = { WheelUp = 1 } } },
@@ -46,7 +50,6 @@ config.mouse_bindings = {
 		event = { Down = { streak = 1, button = { WheelDown = 1 } } },
 		action = wezterm.action.ScrollByLine(4),
 	},
-
 }
 
 -- Multiplexer
@@ -55,19 +58,20 @@ config.default_mux_server_domain = "local"
 
 config.leader = { key = "RightAlt", mods = "NONE", timeout_milliseconds = 2000 }
 
-wezterm.on('update-right-status', function(window, pane)
-  local leader = ''
-  if window:leader_is_active() then
-    leader = wezterm.format {
-  { Attribute = { Intensity = 'Bold' } },
-  { Foreground = { Color = "#E67E80" } },
-  { Text = 'LEADER'},
-  'ResetAttributes',
-  { Text = '                                                                                                                                                                   ' },
-}
-  
-  end
-  window:set_right_status(leader)
+wezterm.on("update-right-status", function(window, pane)
+	local leader = ""
+	if window:leader_is_active() then
+		leader = wezterm.format({
+			{ Attribute = { Intensity = "Bold" } },
+			{ Foreground = { Color = "#E67E80" } },
+			{ Text = "LEADER" },
+			"ResetAttributes",
+			{
+				Text = "                                                                                                                                                                   ",
+			},
+		})
+	end
+	window:set_right_status(leader)
 end)
 
 config.keys = {
@@ -150,53 +154,5 @@ for i = 0, 9 do -- leader + number to activate that tab
 		action = wezterm.action.ActivateTab(i - 1),
 	})
 end
-
--- Color scheme (Everforest)
-config.colors = {
-	foreground = "#d3c6aa",
-	background = "#272e33",
-	cursor_bg = "#D3C6AA",
-	cursor_fg = "#272E33",
-	cursor_border = "#D3C6AA",
-	selection_bg = "#464E53",
-	ansi = {
-		"#343f44", -- black
-		"#E67E80", -- red
-		"#A7C080", -- green
-		"#DBBC7F", -- yellow
-		"#7FBBB3", -- blue
-		"#D699B6", -- magenta
-		"#83C092", -- cyan
-		"#859289", -- white
-	},
-	brights = {
-		"#868D80", -- bright black (gray)
-		"#E67E80", -- bright red
-		"#A7C080", -- bright green
-		"#DBBC7F", -- bright yellow
-		"#7FBBB3", -- bright blue
-		"#D699B6", -- bright magenta
-		"#83C092", -- bright cyan
-		"#9DA9A0", -- bright white
-	},
-	tab_bar = {
-		background = "#272e33",
-		active_tab = {
-			fg_color = "#a7c080",
-			bg_color = "#2e383c",
-			intensity = "Normal",
-			underline = "None",
-			strikethrough = false,
-		},
-		inactive_tab = {
-			bg_color = "#272e33",
-			fg_color = "#808080",
-		},
-		inactive_tab_hover = {
-			bg_color = "#272e33",
-			fg_color = "#808080",
-		},
-	},
-}
 
 return config

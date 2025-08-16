@@ -1,0 +1,18 @@
+scheme: "nightfox"
+author: "EdenEast"
+base00: "192330" # bg0
+base01: "212e3f" # bg1
+base02: "29394f" # bg2
+base03: "575860" # bg3
+base04: "71839b" # fg0
+base05: "cdcecf" # fg1
+base06: "aeafb0" # fg2
+base07: "e4e4e5" # fg3
+base08: "c94f6d" # Red
+base09: "f4a261" # Orange
+base0A: "dbc074" # Yellow
+base0B: "81b29a" # Green
+base0C: "63cdcf" # Cyan
+base0D: "719cd6" # Blue
+base0E: "9d79d6" # Purple
+base0F: "d67ad2" # pink

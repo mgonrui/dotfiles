@@ -1,0 +1,123 @@
+// Start flavours
+/**
+ * Base16 nightfox ROFI Color theme
+ *
+ * Authors
+ *  Scheme: EdenEast
+ *  Template: Mario Gonzalez
+ */
+
+* {
+    base00: rgba ( 25, 35, 48, 100 % );
+    base01: rgba ( 33, 46, 63, 100 % );
+    base02: rgba ( 41, 57, 79, 100 % );
+    base03: rgba ( 87, 88, 96, 100 % );
+    base04: rgba ( 113, 131, 155, 100 % );
+    base05: rgba ( 205, 206, 207, 100 % );
+    base06: rgba ( 174, 175, 176, 100 % );
+    base07: rgba ( 228, 228, 229, 100 % );
+    base08: rgba ( 201, 79, 109, 100 % );
+    base09: rgba ( 244, 162, 97, 100 % );
+    base0A: rgba ( 219, 192, 116, 100 % );
+    base0B: rgba ( 129, 178, 154, 100 % );
+    base0C: rgba ( 99, 205, 207, 100 % );
+    base0D: rgba ( 113, 156, 214, 100 % );
+    base0E: rgba ( 157, 121, 214, 100 % );
+    base0F: rgba ( 214, 122, 210, 100 % );
+}
+// End Flavours
+
+window {
+    height: 600;
+    width: 600;
+
+    border: 1;
+    border-radius: 10;
+    border-color: @base03;
+}
+
+mainbox {
+    spacing: 0;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    color: @base00;
+    padding: 14;
+    background-color: @base00;
+}
+
+message {
+    padding: 10;
+    background-color: @base04;
+}
+
+listview {
+    padding: 8;
+    border-radius: 0 0 10 10;
+    border: 2 2 2 2;
+    border-color: @base00;
+    background-color: @base00;
+    dynamic: false;
+}
+
+textbox {
+    text-color: @base0A;
+    background-color: @base00;
+}
+
+error-message {
+    border: 20 20 20 20;
+}
+
+entry, prompt, case-indicator {
+    text-color: @base0A;
+    background-color: @base00;
+}
+
+prompt {
+    margin: 0 10 0 0;
+}
+
+element {
+    padding: 5;
+    vertical-align: 0.5;
+    border-radius: 10;
+    background-color: @base01;
+}
+
+element.selected.normal {
+    background-color: @base04;
+}
+
+element.alternate.normal {
+    background-color: inherit;
+}
+
+element.normal.active, element.alternate.active {
+    background-color: @base09;
+}
+
+element.selected.active {
+    background-color: @base0B;
+}
+
+element.normal.urgent, element.alternate.urgent {
+    background-color: @base08;
+}
+
+element.selected.urgent {
+    background-color: @base0D;
+}
+
+element-text, element-icon {
+    size: 40;
+    margin: 0 10 0 0;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @base07;
+}
+
+element-text .active, element-text .urgent {
+    text-color: @base00;
+}

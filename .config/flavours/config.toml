@@ -1,0 +1,40 @@
+# Commands go through bash
+shell = "bash -c '{}'"
+
+# This one uses waybar 'default' subtemplate, so it can be ommited
+# [[items]]
+# file = "~/.config/waybar/colors.css"
+# template = "waybar"
+# # Waybar uses a separate color file, so we can safely rewrite the whole file
+# rewrite = true
+
+[[item]]
+file = "~/.config/zathura/zathurarc"
+template = "zathura"
+start = "# Start flavours"
+end = "# End flavours"
+
+[[item]]
+file =  "~/.config/wezterm/colorscheme.toml"
+template = "wezterm"
+start = "# Start flavours"
+end = "# End flavours"
+
+[[item]]
+file = "~/.config/waybar/colors.css"
+template = "waybar"
+start = "/* Start flavours */"
+end = "/* End flavours */"
+hook = "pkill waybar && setsid waybar &"
+
+[[item]]
+file = "~/.config/rofi/colorscheme.rasi"
+template = "rofi"
+start = "// Start flavours"
+end = "// End flavours"
+
+[[item]]
+file = "~/.Xresources"
+template = "xresources"
+start = "! Start flavours"
+end = "! End flavours"

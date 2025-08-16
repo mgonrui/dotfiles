@@ -19,6 +19,8 @@ vim.o.breakindent = false -- Enable break indent
 vim.o.confirm = true -- Enables interactive confirmation prompts before losing unsaved changes
 vim.o.undofile = true -- Save undo history
 vim.opt.iskeyword:append '-' -- Treat dash as part of word
+vim.o.shiftwidth = 4 -- Number of columns that make up one level of (auto)indentation.
+vim.o.tabstop = 4 -- Defines the column multiple used to display the Horizontal Tab
 vim.o.hidden = true -- Allow hidden buffers
 vim.o.errorbells = false -- No error bells
 vim.o.backspace = 'indent,eol,start' -- Better backspace behavior
@@ -69,5 +71,6 @@ vim.opt.linespace = 0 -- Remove extra line spacing (may help)
 vim.o.concealcursor = '' -- Don't hide cursor line markup
 vim.o.lazyredraw = true -- Don't redraw during macros
 vim.o.synmaxcol = 300 -- Syntax highlighting limit
-vim.highlight.priorities.semantic_tokens = 95 -- Dont let LSP override treesitter color settings
+vim.hl.priorities.semantic_tokens = 50 -- Dont let LSP override treesitter color settings
+-- vim.hl.priorities.semantic_tokens
 vim.api.nvim_set_hl(0, 'Visual', { bg = '#464E53' })

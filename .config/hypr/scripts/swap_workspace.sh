@@ -2,10 +2,11 @@
 
 # Get the target workspace number from the argument
 TARGET_WORKSPACE=$1
+ON_FOCUSED_WINDOW=$2
 echo "Target workspace: $TARGET_WORKSPACE"
 
 # Get the name of the current monitor (must install jq to work)
-CURRENT_MONITOR=$(hyprctl monitors -j | jq -r '.[] | select(.focused==true).name')
+CURRENT_MONITOR=$(hyprctl monitors -j | jq -r ".[] | select(.focused==$ON_FOCUSED_WINDOW).name")
 echo "Current monitor: $CURRENT_MONITOR"
 
 # Get the active workspace on the current monitor

@@ -1,32 +1,4 @@
-@define-color bg0 #2d353b;
-@define-color bg1 #343f44;
-@define-color bg2 #3d484d;
-@define-color bg3 #475258;
-@define-color bg4 #4f585e;
-
-@define-color fg0 #d5c9ab;
-@define-color fg1 #d3c6aa;
-@define-color fg2 #c9b99a;
-@define-color fg3 #b5a992;
-@define-color fg4 #a39b8b;
-
-@define-color dark-red #e67e80;
-@define-color dark-green #a7c080;
-@define-color dark-yellow #dbbc7f;
-@define-color dark-blue #7fbbb3;
-@define-color dark-purple #d699b6;
-@define-color dark-aqua #83c092;
-@define-color dark-orange #e69875;
-@define-color dark-gray #859289;
-
-@define-color light-red #e67e80;
-@define-color light-green #a7c080;
-@define-color light-yellow #dbbc7f;
-@define-color light-blue #7fbbb3;
-@define-color light-purple #d699b6;
-@define-color light-aqua #83c092;
-@define-color light-orange #e69875;
-@define-color light-gray #a39b8b;
+@import 'colors.css';
 
 * {
     border: none;
@@ -51,7 +23,7 @@
 #memory,
 #disk,
 #tray {
-    background: @bg0;
+    background: @base00;
     opacity: 1.0;
     padding: 1.5px 7px 1.5px 7px;
     margin-top: 5px;
@@ -62,28 +34,28 @@
 }
 
 #workspaces {
-    background: @bg0;
+    background: @base00;
     border-radius: 60px;
 }
 
 #clock {
-    color: @light-aqua;
+    color: @base0C;
     border-radius: 13px 60px 60px 13px;
 }
 
 #language {
-    color: @light-purple;
+    color: @base0E;
 }
 #custom-brightness {
-    color: @light-yellow;
+    color: @base0A;
 }
 
 #bluetooth {
-    color: @light-blue;
+    color: @base0D;
 }
 
 #pulseaudio {
-    color: @light-red;
+    color: @base08;
   border-radius: 60px 13px 13px 60px;
 }
 
@@ -99,15 +71,15 @@ window#waybar {
 
 
 #workspaces button.persistent {
-    color: @fg4;
+    color: @base04;
 }
 
 #workspaces button.empty {
-    color: @bg2;
+    color: @base02;
 }
 
 
 #workspaces button.active {
-    color: @light-green;
+    color: @base07;
 }
 

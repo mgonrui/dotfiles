@@ -85,19 +85,19 @@ require('lazy').setup {
   require 'plugins.snacks', -- A collection of small QoL plugins
   require 'plugins.nvim-dap', -- Integrated debugger
   require 'plugins.orgmode', -- Org mode
+  require 'plugins.42-header', -- 42 header
   require 'plugins.nvim-dap-ui', -- Prettier UI for debugger
-  require 'plugins.42-header',
+  require 'plugins.nvim-colorizer',
   -- require 'plugins.mason-nvim-dap',
   -- require 'plugins.projectmarks',
   -- require 'plugins.indent-blankline', -- Add indentation guides even on blank lines
   -- require 'plugins.telescope', -- Fuzzy Finder (files, lsp, etc)
   -- require 'plugins.lint',
   -- themes
-  require 'plugins.colorschemes.everforest',
+  -- require 'plugins.colorschemes.everforest',
+  require 'plugins.colorschemes.gruvbox',
+  require 'plugins.colorschemes.nightfox',
 }
 
-
-
-
-vim.cmd.colorscheme 'everforest' -- Load colorscheme (If it's a plugin it needs to be loaded after them)
+vim.cmd.colorscheme 'nightfox' -- Load colorscheme (If it's a plugin it needs to be loaded after them)
 vim.api.nvim_set_hl(0, 'Visual', { bg = '#464E53' }) -- Change bg in visual selection (It needs to be loaded after the colorscheme)
